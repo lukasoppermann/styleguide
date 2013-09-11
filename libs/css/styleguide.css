@@ -1,8 +1,9 @@
 html, body{
     height: 100%;
+    margin: 0;
 }
 body{
-    font-family: Helvetica, Arial;
+    font-family: "Helvetica Neue", Arial;
     font-size: 16px;
     color: rgb(45,50,55);
     padding-top: 60px;
@@ -12,28 +13,82 @@ body{
 header{
     height: 60px;
     width: 100%;
-    background: rgb(45,50,55);
     box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25);
+    background: rgb(250,250,252);
     position: fixed;
     top: 0;
-    color: rgb(250,250,252);
     z-index: 10;
 }
 header h1{
     float: left;
     margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background: rgb(45,50,55);
+    color: rgb(250,250,252);
     font-size: 28px;
     font-weight: 600;
     line-height: 100%;
     padding: 16px;
+    width: 250px;
+    height: 100%;
 }
-
+header .hide-sidebar{
+    position: relative;
+    float: left;
+    width: 60px;
+    height: 100%;
+    border-right: 1px solid rgb(235,235,235);
+    cursor: pointer;
+    overflow: hidden;
+    background: transparent;
+}
+header .hide-sidebar:hover{
+    background: rgb(245,245,245);
+    transition: background .3s ease .1s;
+    -webkit-transition: background .3s ease .1s;
+}
+header .hide-sidebar:before, header .hide-sidebar:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 19px;
+    left: 23px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgb(200,200,200);
+    border-width: 3px 0 0 3px;
+    transform: translate3d(0px, 0, 0) rotate(-45deg);
+    -webkit-transform: translate3d(0px, 0, 0) rotate(-45deg);
+    transition: transform .1s ease .1s;
+    -webkit-transition: -webkit-transform .1s ease .1s;
+}
+header .hide-sidebar:after{
+    transform: translate3d(50px, 0, 0) rotate(-45deg);
+    -webkit-transform: translate3d(50px, 0, 0) rotate(-45deg);
+}
+header .hide-sidebar:hover:after{
+    border-color: rgb(45,205,115);
+    transform: translate3d(0px, 0, 0) rotate(-45deg);
+    -webkit-transform: translate3d(0px, 0, 0) rotate(-45deg);
+}
+header .hide-sidebar:hover:before{
+    transform: translate3d(-50px, 0, 0) rotate(-45deg);
+    -webkit-transform: translate3d(-50px, 0, 0) rotate(-45deg);
+}
 header nav{
     float: right;
     height: 40px;
     margin: 10px 20px 10px 0;
 }
+header nav ul{
+    float: right;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 header nav li{
+    display: block;
     float: left;
     font-size: 16px;
     line-height: 100%;
@@ -46,6 +101,7 @@ header nav li{
     -webkit-transition: background .3s ease .1s, color .3s ease .1s;
 }
 header nav li span{
+    display: block;
     padding: 12px 15px;
 }
 header nav li.active,
@@ -100,3 +156,88 @@ aside nav{
     padding: 10px;
     background: rgb(40,175,95);
 }
+aside nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+aside nav lh, .chapter{
+    position: relative;
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgba(0,0,0,0.35);
+}
+aside nav li{
+    position: relative;
+    display: block;
+    padding: 7px 0 7px 10px;
+    margin: 2px 0;
+    border-radius: 2px;
+    background: rgba(0,0,0,0.0);
+    transition: background .3s ease .05s;
+    -webkit-transition: background .3s ease .05s;
+    cursor: pointer;
+}
+aside nav li:hover{
+    background: rgba(0,0,0,0.2);
+}
+aside nav li.active{
+    background: rgba(0,0,0,0.1);
+}
+
+section{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 20px 3%;
+}
+.section-headline{
+    display: block;
+    width: 100%;
+    padding-bottom: 15px;
+    margin-top: 10px;
+    border-bottom: 2px solid rgb(235,235,235);
+}
+.section-headline .headline{
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: rgb(40,175,95);
+    text-shadow: rgb(255,255,255) 1px 1px 1px;
+}
+.section-headline .copy-link{
+    color: rgb(150,150,152);
+    font-size: 14px;
+    float: right;
+    padding: 0 5px;
+    cursor: pointer;
+}
+/*aside nav li:before{
+    content: "";
+    display: block;
+    width: 1px;
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: -7px;
+    background: rgba(0,0,0,0.075);
+}
+aside nav li:after{
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    top: 50%;
+    left: -7px;
+    transform: translate3d(-5px, -6px, 0);
+    -webkit-transform: translate3d(-5px, -6px, 0);
+    border: 2px solid rgb(40,175,95);
+    border-radius: 5px;
+    background: rgb(0,125,50);   
+}
+aside nav li:last-child:before{
+    display: none;
+}*/
