@@ -252,7 +252,7 @@ a.styleguide-headline:hover:before{
 }
 .styleguide-code{
     tab-size: 3;
-    width: 100%;
+    width: auto;
     white-space: pre-wrap;
     background: rgb(70,75,80);
     border-radius: 2px;
