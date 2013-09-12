@@ -12,4 +12,19 @@ $(function(){
         _wrapper.set('$min-height', (windowHeight - 60)+'px');
     }
     
+    // add blank to external links
+    $('a[href^="http://"], a[href^="https://"]').set("target","_blank");
+    //
+    $('a').each(function(){
+        var $this = $(this),
+            tClass = $this.get('@class');
+
+        if( tClass == null || tClass == undefined )
+        {
+            $this.set('+test');
+            console.log('Zest');
+            
+        }
+    });
+    
 });

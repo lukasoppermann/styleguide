@@ -18,10 +18,11 @@
 		<div class="hide-sidebar"></div>
 		<nav>
 			<ul>
-				<li class="active"><span class="label">Typography</span></li>
+				<li><span class="label">General</span></li>
+				<li><span class="label">Typography</span></li>
 				<li><span class="label">Grid</span></li>
-				<li><span class="label">Buttons</span></li>
-				<li><span class="label">Forms & Alerts</span></li>
+				<li><span class="label">GUI Elements</span></li>
+				<li><span class="label">Content Elements</span></li>
 			</ul>
 		</nav>
 	</header>
@@ -39,6 +40,7 @@
 					<nav>
 						<ul>
 							<lh>Sections</lh>
+							<li><a href="#general" class="label">General</a></li>
 							<li><a href="#headlines" class="label">Headlines</a></li>
 							<li><a href="#copy" class="label">Copy Text</a></li>
 							<li><a href="#links" class="label">Links & more</a></li>
@@ -48,10 +50,23 @@
 			</aside>
 			<article class="styleguide">
 				<section>
-					<div class="section-headline">
-						<a name="headlines" class="headline">Headlines</a>
-						<span class="copy-link">get link</span>
-					</div>
+					<a name="general" class="styleguide-headline">General Typography</a>
+					<p class="styleguide-paragraph">There are two fonts used in Zupply, the "general font" is used mostly for labels and gui elements. The "accent font" is used for elements like headlines.</p>
+					<h3 class="styleguide-headline">General Font</h3>
+					<p class="styleguide-paragraph">Helvetica Neue is used as the general font with Helvetica and Arial as a backup for users who do not have Helvetica Neue installed on their computer.</p>
+					<pre contentEditable="true" class="styleguide-code css">
+{
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+}</pre>
+					<h3 class="styleguide-headline">Accent Font</h3>
+					<p class="styleguide-paragraph">ITC Officina Sans (alternatively <a href="https://www.google.com/fonts/specimen/Source+Sans+Pro">Source Sans Pro</a>) is used as the general font with Helvetica and Arial as a backup for users who do not have Helvetica Neue installed on their computer.</p>
+					<pre contentEditable="true" class="styleguide-code css">
+{
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+}</pre>
+				</section>
+				<section>
+					<a class="styleguide-headline" name="headlines">Headlines</a>
 					<h1>h1. This is a very large header.</h1>
 					<h2>h2. This is a very large header.</h2>
 					<h3>h3. This is a very large header.</h3>
@@ -60,10 +75,7 @@
 					<h6>h6. This is a very large header.</h6>
 				</section>
 				<section>
-					<div class="section-headline">
-						<a name="copy" class="headline">Copy Text</a>
-						<span class="copy-link">get link</span>
-					</div>
+					<a name="copy" class="styleguide-headline">Copy Text</a>
 					<h1>h1. This is a very large header.</h1>
 					<h2>h2. This is a very large header.</h2>
 					<h3>h3. This is a very large header.</h3>
@@ -72,10 +84,7 @@
 					<h6>h6. This is a very large header.</h6>
 				</section>
 				<section>
-					<div class="section-headline">
-						<a name="links" class="headline">Links & Special text formats</a>
-						<span class="copy-link">get link</span>
-					</div>
+					<a name="links" class="styleguide-headline">Links & Special text formats</a>
 					<h1>h1. This is a very large header.</h1>
 					<h2>h2. This is a very large header.</h2>
 					<h3>h3. This is a very large header.</h3>
