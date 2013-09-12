@@ -158,9 +158,12 @@ aside .intro{
     background: rgb(45,205,115);
 }
 aside .intro h2{
-    margin: 5px 0 15px 0;
-    font-weight: 600;
+    margin: 12px 0 15px 10px;
+    font-weight: 400;
     font-size: 18px;
+}
+aside .intro p{
+    margin-left: 10px;  
 }
 aside nav{
     padding: 10px;
@@ -210,6 +213,7 @@ section{
 .styleguide-paragraph{
     margin: 0 0 10px 0;
     line-height: 140%;
+    max-width: 700px;
 }
 .styleguide-headline{
     display: block;

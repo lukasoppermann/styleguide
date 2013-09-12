@@ -14,17 +14,15 @@ $(function(){
     
     // add blank to external links
     $('a[href^="http://"], a[href^="https://"]').set("target","_blank");
-    //
-    $('a').each(function(){
-        var $this = $(this),
+    // add class to internal links
+    $('section a').each(function(item){
+        var $this = $(item),
             tClass = $this.get('@class');
-
         if( tClass == null || tClass == undefined )
         {
-            $this.set('+test');
-            console.log('Zest');
-            
+            $this.set('+styleguide-link');
         }
     });
-    
+    // prepare code
+    $('.styleguide-code').set('@contentEditable','true');
 });
