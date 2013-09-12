@@ -138,10 +138,20 @@ article{
 }
 aside{
     color: rgb(250,250,252);
-	float:left;
-	position:relative;
-	overflow:hidden;
+	float: left;
+    display: block;
+	position: relative;
+	overflow: hidden;
     width: 250px;
+    min-height: 300px;
+}
+aside .fixed{
+    width: 250px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 60px;
 }
 aside .intro{
     padding: 10px 10px 20px 10px;
@@ -173,7 +183,6 @@ aside nav lh, .chapter{
 aside nav li{
     position: relative;
     display: block;
-    padding: 7px 0 7px 10px;
     margin: 2px 0;
     border-radius: 2px;
     background: rgba(0,0,0,0.0);
@@ -187,7 +196,12 @@ aside nav li:hover{
 aside nav li.active{
     background: rgba(0,0,0,0.1);
 }
-
+aside nav a{
+    display: block;
+    padding: 7px 0 7px 10px;
+    text-decoration: none;
+    color: inherit;
+}
 section{
     box-sizing: border-box;
     -moz-box-sizing: border-box;
