@@ -65,3 +65,9 @@ section input{
     border: 0;
     padding: 3px;
 }
+.color.accents{ background: rgb(0,135,190); }
+.color.accents:before{ content: "Zupply-blue"; }
+.color.accents:after{ content: "RGB 0,135,190"; }
+.color.text{ background: rgb(60,60,60); }
+.color.text:before{ content: "Black"; }
+.color.text:after{ content: "RGB 60,60,60"; }

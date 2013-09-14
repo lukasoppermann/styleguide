@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="author" content="Lukas Oppermann - vea.re" />
+	<meta name="description" content="An html5 style guide" />
+	<meta name="robots" content="index,follow" />
+	<meta name="language" content="en" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
+	<!-- <link rel="stylesheet" type="text/css" href="./libs/css/reset.css" media="screen" /> -->
+	<link rel="stylesheet" type="text/css" href="./libs/css/styleguide.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="./libs/css/your-style.css" media="screen" />
+	<style type="text/css" media="screen">
+		
+	</style>
+	<title>Styleguide - General Information</title>
+</head>
+<body>
+	<header>
+		<h1 id="styleguide">Styleguide</h1>
+		<div class="hide-sidebar"></div>
+		<nav>
+			<ul>
+				<li><a class="label" href="general.html">General</a></li>
+				<li><a class="label" href="typography.html">Typography</a></li>
+				<li><a class="label" href="grid.html">Grid</a></li>
+				<li><a class="label" href="gui.html">GUI Elements</a></li>
+				<li><a class="label" href="content-elements.html">Content Elements</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<div class="wrapper">
+		<div class="wrapper-left-column">
+			
+			<aside>
+				<div class="fixed">
+					<div class="intro">
+						<span class="chapter">Chapter</span>
+						<h2>General Information</h2>
+						<p>This section discusses colors and elements of design.</p>
+					</div>
+					<nav>
+						<ul>
+							<lh>Sections</lh>
+							<li><a href="#general" class="label">Introduction</a></li>
+							<li><a href="#colors" class="label">Colors</a></li>
+							<li><a href="#design-elements" class="label">Elements of design</a></li>
+						</ul>
+					</nav>
+				</div>
+			</aside>
+			<article class="styleguide">
+				<!-- General -->
+				<section>
+					<a name="general" class="styleguide-headline">General Typography</a>
+					<p class="styleguide-paragraph">There are two fonts used in Zupply, the "general font" is used mostly for labels and gui elements. The "accent font" is used for elements like headlines.</p>
+					
+					<h3 class="styleguide-headline">General Font</h3>
+					<p class="styleguide-paragraph">Helvetica Neue is used as the general font with Helvetica and Arial as a backup for users who do not have Helvetica Neue installed on their computer.</p>
+				</section>
+				<!-- Headlines -->
+				<section>
+					<a class="styleguide-headline" name="colors">Colors</a>
+					<p class="styleguide-paragraph">An h1 is only used for very important content like a users name on her profile. The color is either white or zupply-blue-dark.</p>
+					<div class="color accents"></div>
+					<div class="color text"></div>
+				</section>
+				<!-- copy -->
+				<section>
+					<a name="copy" class="styleguide-headline">Copy Text</a>
+					<p style='font-family: "Helvetica Neue", Helvetica, Sans-serif; font-size: 16px;'>Lorem far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+					<p style='font-family: "ITC Officina Sans", "Source Sans Pro", "Helvetica Neue", Helvetica, Sans-serif; font-size: 17px;'>Lorem One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+					<p style='font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Sans-serif; font-size: 17px;'>
+					Lorem One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.
+				</p>
+					</p>
+					<pre class="styleguide-code css">
+p{
+	font-size: 16px;
+	font-family: "ITC Officina Sans", Helvetica, Arial, Sans-serif;
+	font-weight: 400;
+	color: rgb(60,60,60);
+}
+</pre>
+				</section>
+		
+				<section>
+					<a name="links" class="styleguide-headline">Links & Special text formats</a>
+					<h3 class="styleguide-headline">Important link</h3>
+					<p>An <a class="important-link">important link</a> is designed to be noticed in a text.</p>
+					<pre class="styleguide-code css">
+a{
+	color: rgb(0,135,190);
+	text-decoration: underline;
+	cursor: pointer;
+}
+a:hover{
+    text-decoration: none;
+}
+</pre>
+					<h3 class="styleguide-headline">Show/read more link</h3>
+					<p>A show/read more link shows the user that she can get more information on a topic, once she reached the end of a text, but it does not distract while reading. <a class="read-more">read more</a></p>
+					<pre class="styleguide-code css">
+a.read-more{
+	color: rgb(160,160,160);
+	text-decoration: underline;
+	cursor: pointer;
+	transition: color .4s ease .1s;
+	-webkit-transition: color .4s ease .1s;
+}
+a.read-more:hover{
+	text-decoration: none;
+	color: rgb(0,135,190);
+}
+</pre>
+					<h3 class="styleguide-headline">Labels</h3>
+					<p>To show a user what kind of information is in a textarea, labels are used. The labels must be always present but not obtrusive. A label is clickable and sets the focus to the related field.</p>
+					
+					<label for="your_name" >Your name</label>
+					<input type="text" value="Anthony Parker" id="your_name" />
+					<pre class="styleguide-code css">
+label{
+	color: rgb(160,160,160);
+	font-size: 14px;
+	cursor: pointer;
+	transition: color .4s ease .1s;
+	-webkit-transition: color .4s ease .1s;
+}
+label:hover{
+	color: rgb(0,135,190);
+}
+</pre>
+				</section>
+			</article>
+			
+		</div>
+	</div>
+	<script type="text/javascript" charset="utf-8" src="./libs/js/minified-2.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./libs/js/javascript.js"></script>
+</body>
+</html>
