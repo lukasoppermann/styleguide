@@ -25,4 +25,12 @@ $(function(){
     });
     // prepare code
     $('.styleguide-code').set('@contentEditable','true');
+    
+    // $('.styleguide-code.css').on('keyup', function(){
+    //     var css = '';
+    //     $('.styleguide-code').each(function(item){
+    //         css += $(item).text();
+    //     });
+    //     $$('style').innerHTML = css;
+    // });
 });

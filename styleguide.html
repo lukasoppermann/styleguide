@@ -10,6 +10,9 @@
 	<!-- <link rel="stylesheet" type="text/css" href="./libs/css/reset.css" media="screen" /> -->
 	<link rel="stylesheet" type="text/css" href="./libs/css/styleguide.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="./libs/css/your-style.css" media="screen" />
+	<style type="text/css" media="screen">
+		
+	</style>
 	<title>Styleguide</title>
 </head>
 <body>
@@ -49,6 +52,7 @@
 				</div>
 			</aside>
 			<article class="styleguide">
+				<!-- General -->
 				<section>
 					<a name="general" class="styleguide-headline">General Typography</a>
 					<p class="styleguide-paragraph">There are two fonts used in Zupply, the "general font" is used mostly for labels and gui elements. The "accent font" is used for elements like headlines.</p>
@@ -67,32 +71,113 @@
 	font-family: "Source Sans Pro", Helvetica, Arial, Sans-serif;	
 }</pre>
 				</section>
+				<!-- Headlines -->
 				<section>
 					<a class="styleguide-headline" name="headlines">Headlines</a>
-					<h1>h1. This is a very large header.</h1>
-					<h2>h2. This is a very large header.</h2>
-					<h3>h3. This is a very large header.</h3>
-					<h4>h4. This is a very large header.</h4>
-					<h5>h5. This is a very large header.</h5>
-					<h6>h6. This is a very large header.</h6>
+					<h1>h1. A very large headline.</h1>
+					<p class="styleguide-paragraph">An h1 is only used for very important content like a users name on her profile. The color is either white or zupply-blue-dark.</p>
+					<h2>h2. A large headline.</h2>
+					<p class="styleguide-paragraph">An h2 is used for page main headlines, etc. The color is either white or zupply-blue-dark.</p>
+					<h3>h3. The normal headline format.</h3>
+					<p class="styleguide-paragraph">An h3 is used for most headlines, for e.g. section headlines. The color is either white or zupply-blue-dark.</p>
+					<h4>h4. This is a medium priority headline.</h4>
+					<p class="styleguide-paragraph">An h4 is used for item headlines like project headlines in the project history in a users profile. The color is zupply-blue-dark.</p>
+					<h5>h5. This is a low priority headline.</h5>
+					<p class="styleguide-paragraph">An h5 is used for headlines within a section like headlines for paragraphs. The color is the default text color.</p>
+					<pre class="styleguide-code css">
+h1, h2, h3, h4, h5{
+	font-family: "ITC Officina Sans", Helvetica, Arial, Sans-serif;
+	font-weight: 600;
+	color: rgb(0,135,190);
+}
+h1{
+	font-size: 60px;
+	line-height: 100%;
+}
+h2{
+	font-size: 24px;
+	line-height: 130%;
+}
+h3{
+	font-size: 18px;
+}
+h4{
+	font-size: 16px;
+	color: rgb(0,135,190);
+	margin-bottom: 10px;
+	font-weight: 400;
+}
+h5{
+	font-size: 16px;
+	color: inherit;
+	margin-bottom: 10px;
+}</pre>
 				</section>
+				<!-- copy -->
 				<section>
 					<a name="copy" class="styleguide-headline">Copy Text</a>
-					<h1>h1. This is a very large header.</h1>
-					<h2>h2. This is a very large header.</h2>
-					<h3>h3. This is a very large header.</h3>
-					<h4>h4. This is a very large header.</h4>
-					<h5>h5. This is a very large header.</h5>
-					<h6>h6. This is a very large header.</h6>
+					<p style='font-family: "Helvetica Neue", Helvetica, Sans-serif; font-size: 16px;'>Lorem far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+					<p style='font-family: "ITC Officina Sans", "Source Sans Pro", "Helvetica Neue", Helvetica, Sans-serif; font-size: 17px;'>Lorem One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+					<p style='font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Sans-serif; font-size: 17px;'>
+					Lorem One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.
+				</p>
+					</p>
+					<pre class="styleguide-code css">
+p{
+	font-size: 16px;
+	font-family: "ITC Officina Sans", Helvetica, Arial, Sans-serif;
+	font-weight: 400;
+	color: rgb(60,60,60);
+}
+</pre>
 				</section>
+		
 				<section>
 					<a name="links" class="styleguide-headline">Links & Special text formats</a>
-					<h1>h1. This is a very large header.</h1>
-					<h2>h2. This is a very large header.</h2>
-					<h3>h3. This is a very large header.</h3>
-					<h4>h4. This is a very large header.</h4>
-					<h5>h5. This is a very large header.</h5>
-					<h6>h6. This is a very large header.</h6>
+					<h3 class="styleguide-headline">Important link</h3>
+					<p>An <a class="important-link">important link</a> is designed to be noticed in a text.</p>
+					<pre class="styleguide-code css">
+a{
+	color: rgb(0,135,190);
+	text-decoration: underline;
+	cursor: pointer;
+}
+a:hover{
+    text-decoration: none;
+}
+</pre>
+					<h3 class="styleguide-headline">Show/read more link</h3>
+					<p>A show/read more link shows the user that she can get more information on a topic, once she reached the end of a text, but it does not distract while reading. <a class="read-more">read more</a></p>
+					<pre class="styleguide-code css">
+a.read-more{
+	color: rgb(160,160,160);
+	text-decoration: underline;
+	cursor: pointer;
+	transition: color .4s ease .1s;
+	-webkit-transition: color .4s ease .1s;
+}
+a.read-more:hover{
+	text-decoration: none;
+	color: rgb(0,135,190);
+}
+</pre>
+					<h3 class="styleguide-headline">Labels</h3>
+					<p>To show a user what kind of information is in a textarea, labels are used. The labels must be always present but not obtrusive. A label is clickable and sets the focus to the related field.</p>
+					
+					<label for="your_name" >Your name</label>
+					<input type="text" value="Anthony Parker" id="your_name" />
+					<pre class="styleguide-code css">
+label{
+	color: rgb(160,160,160);
+	font-size: 14px;
+	cursor: pointer;
+	transition: color .4s ease .1s;
+	-webkit-transition: color .4s ease .1s;
+}
+label:hover{
+	color: rgb(0,135,190);
+}
+</pre>
 				</section>
 			</article>
 			
