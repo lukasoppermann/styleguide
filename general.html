@@ -21,7 +21,7 @@
 		<div class="hide-sidebar"></div>
 		<nav>
 			<ul>
-				<li><a class="label" href="general.html">General</a></li>
+				<li class="active"><a class="label" href="general.html">General</a></li>
 				<li><a class="label" href="typography.html">Typography</a></li>
 				<li><a class="label" href="grid.html">Grid</a></li>
 				<li><a class="label" href="gui.html">GUI Elements</a></li>
@@ -40,7 +40,7 @@
 						<h2>General Information</h2>
 						<p>This section discusses colors and elements of design.</p>
 					</div>
-					<nav>
+					<nav class="anchors">
 						<ul>
 							<lh>Sections</lh>
 							<li><a href="#general" class="label">Introduction</a></li>
@@ -68,24 +68,38 @@
 					<div class="color accent"></div>
 					<div class="color black"></div>
 					<div class="color gray"></div>
+					<div class="color medium-gray"></div>
 					<div class="color light-gray"></div>
 					<div class="color white-gray"></div>
+					<div class="color white"></div>
 				</section>
 				<!-- copy -->
 				<section>
-					<a name="copy" class="styleguide-headline">Copy Text</a>
-					<p style='font-family: "Helvetica Neue", Helvetica, Sans-serif; font-size: 16px;'>Lorem far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-					<p style='font-family: "ITC Officina Sans", "Source Sans Pro", "Helvetica Neue", Helvetica, Sans-serif; font-size: 17px;'>Lorem One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-					<p style='font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Sans-serif; font-size: 17px;'>
-					Lorem One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.
-				</p>
-					</p>
+					<a name="design-elements" class="styleguide-headline">Elements of design</a>
+					<h3 class="styleguide-headline">Radii</h3>
+					<p class="styleguide-paragraph">Zupply has two radii styles, one for elements like buttons and dialog boxes, and another style for circular elements.</p>
+					<div class="dialog">
+						<div class="circle">This is a circle</div>
+						<div class="button">Button</div>
+					</div>
+<pre class="styleguide-code css">
+.circle{
+	overflow: hidden;
+	border-radius: 50%;
+}
+.button{
+	border-radius: 5px;
+}
+</pre>
+					<h3 class="styleguide-headline">Lines</h3>
+					<p class="styleguide-paragraph">Lines are sued to separate sections from each other.</p>
+					<hr></hr>
+					<p class="styleguide-paragraph">The same line attributes are used in tables, boxes and lists.</p>
 					<pre class="styleguide-code css">
-p{
-	font-size: 16px;
-	font-family: "ITC Officina Sans", Helvetica, Arial, Sans-serif;
-	font-weight: 400;
-	color: rgb(60,60,60);
+hr{
+	height: 0; /* reset default hr attributes */
+	border: 0; /* reset default hr attributes */
+	border-bottom: 1px solid rgb(215,215,215);
 }
 </pre>
 				</section>
@@ -108,7 +122,7 @@ a:hover{
 					<p>A show/read more link shows the user that she can get more information on a topic, once she reached the end of a text, but it does not distract while reading. <a class="read-more">read more</a></p>
 					<pre class="styleguide-code css">
 a.read-more{
-	color: rgb(160,160,160);
+	color: rgb(140,140,140);
 	text-decoration: underline;
 	cursor: pointer;
 	transition: color .4s ease .1s;
@@ -126,7 +140,7 @@ a.read-more:hover{
 					<input type="text" value="Anthony Parker" id="your_name" />
 					<pre class="styleguide-code css">
 label{
-	color: rgb(160,160,160);
+	color: rgb(140,140,140);
 	font-size: 14px;
 	cursor: pointer;
 	transition: color .4s ease .1s;
@@ -142,6 +156,7 @@ label:hover{
 		</div>
 	</div>
 	<script type="text/javascript" charset="utf-8" src="./libs/js/minified-2.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./libs/js/scrollOffset.js"></script>
 	<script type="text/javascript" charset="utf-8" src="./libs/js/javascript.js"></script>
 </body>
 </html>

@@ -11,7 +11,12 @@ $(function(){
     {
         _wrapper.set('$min-height', (windowHeight - 60)+'px');
     }
-    
+    // achor smooth move
+    $('.anchors a').on('click', function(){
+        $.scrollOffset($('[name="'+$(this).get('href').split("#")[1]+'"]').offset().y - 70, 1000);
+        return false;
+    });
+     
     // add blank to external links
     $('a[href^="http://"], a[href^="https://"]').set("target","_blank");
     // add class to internal links

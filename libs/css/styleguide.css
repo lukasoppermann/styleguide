@@ -332,6 +332,7 @@ a.styleguide-headline:hover:before{
 }
 .color:after{
     bottom: -55px;
+    color: rgb(140,140,140);
 }
 /*aside nav li:before{
     content: "";
