@@ -1,29 +1,34 @@
+/* Utilities */
+section .margin-10{
+    margin: 10px;
+}
+/* */
 section h1, section h2, section h3, section h4, section h5{
     font-weight: 600;
     font-family: "ITC Officina Sans", "Source Sans Pro", "Helvetica Neue", Helvetica, Sans-serif;
     color: rgb(0,135,190);
 }
-section h1{
-    font-size: 60px;
+section.grid h1, section h1{
+    font-size: 3.7em;
     line-height: 100%;
     margin-bottom: 10px;
 }
-section h2{
-    font-size: 24px;
+section.grid h2, section h2{
+    font-size: 1.5em;
     line-height: 130%;
     margin-bottom: 10px;
 }
-section h3{
-    font-size: 18px;
+section.grid h3, section h3{
+    font-size: 1.1em;
 }
-section h4{
-	font-size: 16px;
+section.grid h4, section h4{
+	font-size: 1em;
 	color: rgb(0,135,190);
 	margin-bottom: 10px;
 	font-weight: 400;
 }
-section h5{
-    font-size: 16px;
+section.grid h5, section h5{
+    font-size: 1em;
     color: inherit;
     margin-bottom: 10px;
 }
@@ -51,7 +56,7 @@ section a.read-more:hover{
 }
 section label{
     color: rgb(140,140,140);
-    font-size: 14px;
+    font-size: 0.9em;
     cursor: pointer;
     transition: color .4s ease .1s;
     -webkit-transition: color .4s ease .1s;
@@ -61,7 +66,7 @@ section label:hover{
 }
 section input{
     color: rgb(60,60,60);
-    font-size: 16px;
+    font-size: 1em;
     border: 0;
     padding: 3px;
 }
@@ -71,6 +76,9 @@ section input{
 .color.brand-dark{ background: rgb(0,135,190); }
 .color.brand-dark:before{ content: "Zupply-blue-dark"; }
 .color.brand-dark:after{ content: "RGB 0,135,190"; }
+.color.blue-dark{ background: rgb(20,95,150); }
+.color.blue-dark:before{ content: "Blue-dark"; }
+.color.blue-dark:after{ content: "RGB 20,95,150"; }
 .color.accent{ background: rgb(245,210,45); }
 .color.accent:before{ content: "Zupply-blue"; }
 .color.accent:after{ content: "RGB 245,210,45"; }
@@ -118,7 +126,7 @@ section .button{
     color: rgb(60,60,60);
     text-align: center;
     padding: 7px 15px;
-    font-size: 16px;
+    font-size: 1em;
     float: left;
     background-color: rgb(235,235,235);
     background-image: -webkit-linear-gradient(bottom, rgb(215,215,215), rgb(235,235,235));
@@ -129,10 +137,38 @@ section .button{
     box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.05);
 }
 section .button:hover{
-    font-size: 16px;
     border: 1px solid rgb(140,140,140);
     background-color: rgb(235,235,235);
     box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25);
+}
+section .button.active, section .button.active:hover{
+    border: 1px solid rgb(140,140,140);
+    color: rgb(60,60,60);
+    background-color: rgb(215,215,215);
+    background-image: -webkit-linear-gradient(top, rgb(215,215,215), rgb(180,180,180));
+    background-image: linear-gradient(top, rgb(215,215,215), rgb(180,180,180));
+    transition: border-color .5s ease .1s, box-shadow .2s ease;
+    -webkit-transition: border-color .5s ease .1s, box-shadow .2s ease;
+    box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.25);
+}
+section .button.disabled, section .button.disabled:hover{
+    color: rgb(140,140,140);
+    border-color: rgb(215,215,215);
+    box-shadow: none;
+    cursor: default;
+    background-color: rgb(235,235,235);
+    background-image: -webkit-linear-gradient(bottom, rgb(235,235,235), rgb(250,250,250));
+    background-image: linear-gradient(bottom, rgb(235,235,235), rgb(250,250,250));
+}
+section .button.primary{
+    background-color: rgb(40,155,195);
+    background-image: -webkit-linear-gradient(top, rgb(40,155,195), rgb(0,135,190));
+    background-image: linear-gradient(top, rgb(40,155,195), rgb(0,135,190));
+    color: rgb(250,250,250);
+    border-color: rgb(0,135,190);
+}
+section .button.primary:hover{
+    border-color: rgb(20,95,150);
 }
 section .reveal-modal{
     position: relative;
@@ -154,4 +190,41 @@ section .shadow.light{
 }
 section .shadow.minimal{
     box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.05); 
+}
+section .button-group{
+    float: left;
+    padding: 0;
+    list-style: none;
+}
+section .button-group .button{
+    float: left;
+    position: relative;
+    text-decoration: none;
+    border-radius: 0;
+    border-right: 0;
+}
+section .button-group li{
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+section .button-group li:first-child .button{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+section .button-group li:last-child .button{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-right: 1px solid rgb(180,180,180);
+}
+section .button-group li:hover .button{
+    z-index: 10;
+    border-right: 0;
+}
+section .button-group li:not(.active):hover .button{
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25), 1px 0px 0px 0px rgb(180,180,180);
+}
+section .button-group li:hover:last-child .button{
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25);
+    border-right: 1px solid rgb(180,180,180);
 }

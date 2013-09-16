@@ -1,116 +1,116 @@
 @import url("gridified/gridified-0.0.1.css");
 html, body{
-    height: 100%;
-    margin: 0;
+	height: 100%;
+	margin: 0;
 }
 body{
-    font-family: "Helvetica Neue", Arial;
-    font-size: 16px;
-    color: rgb(45,50,55);
-    padding-top: 60px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
+	font-family: "Helvetica Neue", Arial;
+	font-size: 16px;
+	color: rgb(45,50,55);
+	padding-top: 60px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 header{
-    height: 60px;
-    width: 100%;
-    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25);
-    background: rgb(250,250,252);
-    position: fixed;
-    top: 0;
-    z-index: 10;
+	height: 60px;
+	width: 100%;
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25);
+	background: rgb(250,250,252);
+	position: fixed;
+	top: 0;
+	z-index: 10;
 }
 header h1{
-    float: left;
-    margin: 0;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    background: rgb(45,50,55);
-    color: rgb(250,250,252);
-    font-size: 28px;
-    font-weight: 600;
-    line-height: 100%;
-    padding: 16px;
-    width: 250px;
-    height: 100%;
+	float: left;
+	margin: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	background: rgb(45,50,55);
+	color: rgb(250,250,252);
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 100%;
+	padding: 16px;
+	width: 250px;
+	height: 100%;
 }
 header .hide-sidebar{
-    position: relative;
-    float: left;
-    width: 60px;
-    height: 100%;
-    border-right: 1px solid rgb(235,235,235);
-    cursor: pointer;
-    overflow: hidden;
-    background: transparent;
+	position: relative;
+	float: left;
+	width: 60px;
+	height: 100%;
+	border-right: 1px solid rgb(235,235,235);
+	cursor: pointer;
+	overflow: hidden;
+	background: transparent;
 }
 header .hide-sidebar:hover{
-    background: rgb(245,245,245);
-    transition: background .3s ease .1s;
-    -webkit-transition: background .3s ease .1s;
+	background: rgb(245,245,245);
+	transition: background .3s ease .1s;
+	-webkit-transition: background .3s ease .1s;
 }
 header .hide-sidebar:before, header .hide-sidebar:after{
-    content: "";
-    display: block;
-    position: absolute;
-    top: 19px;
-    left: 23px;
-    width: 18px;
-    height: 18px;
-    border: 2px solid rgb(200,200,200);
-    border-width: 3px 0 0 3px;
-    transform: translate3d(0px, 0, 0) rotate(-45deg);
-    -webkit-transform: translate3d(0px, 0, 0) rotate(-45deg);
-    transition: transform .1s ease .1s;
-    -webkit-transition: -webkit-transform .1s ease .1s;
+	content: "";
+	display: block;
+	position: absolute;
+	top: 19px;
+	left: 23px;
+	width: 18px;
+	height: 18px;
+	border: 2px solid rgb(200,200,200);
+	border-width: 3px 0 0 3px;
+	transform: translate3d(0px, 0, 0) rotate(-45deg);
+	-webkit-transform: translate3d(0px, 0, 0) rotate(-45deg);
+	transition: transform .1s ease .1s;
+	-webkit-transition: -webkit-transform .1s ease .1s;
 }
 header .hide-sidebar:after{
-    transform: translate3d(50px, 0, 0) rotate(-45deg);
-    -webkit-transform: translate3d(50px, 0, 0) rotate(-45deg);
+	transform: translate3d(50px, 0, 0) rotate(-45deg);
+	-webkit-transform: translate3d(50px, 0, 0) rotate(-45deg);
 }
 header .hide-sidebar:hover:after{
-    border-color: rgb(45,205,115);
-    transform: translate3d(0px, 0, 0) rotate(-45deg);
-    -webkit-transform: translate3d(0px, 0, 0) rotate(-45deg);
+	border-color: rgb(45,205,115);
+	transform: translate3d(0px, 0, 0) rotate(-45deg);
+	-webkit-transform: translate3d(0px, 0, 0) rotate(-45deg);
 }
 header .hide-sidebar:hover:before{
-    transform: translate3d(-50px, 0, 0) rotate(-45deg);
-    -webkit-transform: translate3d(-50px, 0, 0) rotate(-45deg);
+	transform: translate3d(-50px, 0, 0) rotate(-45deg);
+	-webkit-transform: translate3d(-50px, 0, 0) rotate(-45deg);
 }
 header nav{
-    float: right;
-    height: 40px;
-    margin: 10px 20px 10px 0;
+	float: right;
+	height: 40px;
+	margin: 10px 20px 10px 0;
 }
 header nav ul{
-    float: right;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+	float: right;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 header nav li{
-    display: block;
-    float: left;
-    font-size: 16px;
-    line-height: 100%;
-    cursor: pointer;
-    min-width: 80px;
-    text-align: center;
-    border-radius: 2px;
-    margin: 0 10px 0 0;
-    transition: background .3s ease .1s, color .3s ease .1s;
-    -webkit-transition: background .3s ease .1s, color .3s ease .1s;
+	display: block;
+	float: left;
+	font-size: 16px;
+	line-height: 100%;
+	cursor: pointer;
+	min-width: 80px;
+	text-align: center;
+	border-radius: 2px;
+	margin: 0 10px 0 0;
+	transition: background .3s ease .1s, color .3s ease .1s;
+	-webkit-transition: background .3s ease .1s, color .3s ease .1s;
 }
 header nav li a{
-    display: block;
-    padding: 12px 15px;
-    text-decoration: none;
-    color: inherit;
+	display: block;
+	padding: 12px 15px;
+	text-decoration: none;
+	color: inherit;
 }
 header nav li.active,
 header nav li:hover {
-    background: rgb(45,205,115);
-    color: rgb(250,250,252);
+	background: rgb(45,205,115);
+	color: rgb(250,250,252);
 }
 .wrapper{
 	position:relative;	/* This fixes the IE7 overflow hidden bug */
@@ -123,247 +123,250 @@ header nav li:hover {
 	float: left;
 	width: 100%;
 	position: relative;
-    background: rgb(70,75,80);
+	background: rgb(70,75,80);
 }
 
 article{
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    background: rgb(250,250,252);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	background: rgb(250,250,252);
 	float: left;
 	position: relative;
 	overflow: hidden;
-    width: calc(100% - 250px);
-    width: -webkit-calc(100% - 250px);
-    width: -moz-calc(100% - 250px);
+	width: calc(100% - 250px);
+	width: -webkit-calc(100% - 250px);
+	width: -moz-calc(100% - 250px);
 }
 aside{
-    color: rgb(250,250,252);
+	color: rgb(250,250,252);
 	float: left;
-    display: block;
+	display: block;
 	position: relative;
 	overflow: hidden;
-    width: 250px;
-    min-height: 300px;
+	width: 250px;
+	min-height: 300px;
 }
 aside .fixed{
-    width: 250px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    position: fixed;
-    left: 0;
-    top: 60px;
+	width: 250px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	position: fixed;
+	left: 0;
+	top: 60px;
 }
 aside .intro{
-    padding: 10px 10px 20px 10px;
-    background: rgb(45,205,115);
+	padding: 10px 10px 20px 10px;
+	background: rgb(45,205,115);
 }
 aside .intro h2{
-    margin: 12px 0 15px 10px;
-    font-weight: 400;
-    font-size: 18px;
+	margin: 12px 0 15px 10px;
+	font-weight: 400;
+	font-size: 18px;
 }
 aside .intro p{
-    margin-left: 10px;  
+	margin-left: 10px;  
 }
 aside nav{
-    padding: 10px;
-    background: rgb(40,175,95);
+	padding: 10px;
+	background: rgb(40,175,95);
 }
 aside nav ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 aside nav lh, .chapter{
-    position: relative;
-    display: block;
-    font-size: 12px;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: rgba(0,0,0,0.35);
+	position: relative;
+	display: block;
+	font-size: 12px;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: rgba(0,0,0,0.35);
 }
 aside nav li{
-    position: relative;
-    display: block;
-    margin: 2px 0;
-    border-radius: 2px;
-    background: rgba(0,0,0,0.0);
-    transition: background .3s ease .05s;
-    -webkit-transition: background .3s ease .05s;
-    cursor: pointer;
+	position: relative;
+	display: block;
+	margin: 2px 0;
+	border-radius: 2px;
+	background: rgba(0,0,0,0.0);
+	transition: background .3s ease .05s;
+	-webkit-transition: background .3s ease .05s;
+	cursor: pointer;
 }
 aside nav li:hover{
-    background: rgba(0,0,0,0.2);
+	background: rgba(0,0,0,0.2);
 }
 aside nav li.active{
-    background: rgba(0,0,0,0.1);
+	background: rgba(0,0,0,0.1);
 }
 aside nav a{
-    display: block;
-    padding: 7px 0 7px 10px;
-    text-decoration: none;
-    color: inherit;
+	display: block;
+	padding: 7px 0 7px 10px;
+	text-decoration: none;
+	color: inherit;
 }
 section{
-    float: left;
-    width: 100%;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    padding: 20px 3%;
+	float: left;
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 20px 3%;
 }
 *[class*="styleguide-"]{
-    font-family: "Helvetica Neue", Helvetica, Arial !important;   
+	font-family: "Helvetica Neue", Helvetica, Arial !important;   
 }
 .margin-top-20{ margin-top: 20px; }
+.margin-bottom-20{ margin-bottom: 20px; }
+.margin-20{ margin: 20px; }
+.margin-20-0{ margin: 20px 0px; }
 .styleguide-paragraph{
-    margin-bottom: 10px;
-    line-height: 140%;
-    font-size: 16px;
+	margin-bottom: 10px;
+	line-height: 140%;
+	font-size: 16px;
 }
 .styleguide-headline{
-    display: inline-block;
-    width: 100%;
-    margin: 20px 0 10px;
-    padding: 0;
-    font-weight: 600;
-    color: rgb(40,175,95);
+	display: inline-block;
+	width: 100%;
+	margin: 20px 0 10px;
+	padding: 0;
+	font-weight: 600;
+	color: rgb(40,175,95);
 }
 h3.styleguide-headline{
-    font-size: 16px;
+	font-size: 16px !important;
 }
 a.styleguide-headline{
-    border-bottom: 2px solid rgb(235,235,235);   
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    cursor: pointer;
-    font-size: 18px;
-    padding-bottom: 15px;
+	border-bottom: 2px solid rgb(235,235,235);   
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	cursor: pointer;
+	font-size: 18px;
+	padding-bottom: 15px;
 }
 a.styleguide-headline:before{
-    content: "get link";
-    display: block;
-    color: rgb(150,150,152);
-    font-size: 14px;
-    float: right;
-    margin-top: -10px;
-    padding: 10px;
-    text-transform: lowercase;
-    z-index: 10;
-    border-radius: 2px;
+	content: "get link";
+	display: block;
+	color: rgb(150,150,152);
+	font-size: 14px;
+	float: right;
+	margin-top: -10px;
+	padding: 10px;
+	text-transform: lowercase;
+	z-index: 10;
+	border-radius: 2px;
 }
 a.styleguide-headline:hover:before{
-    background: rgb(45,205,115);
-    color: rgb(250,250,252);
+	background: rgb(45,205,115);
+	color: rgb(250,250,252);
 }
 .styleguide-code{
-    tab-size: 4;
-    font-size: 16px;
-    line-height: 140%;
-    white-space: pre-wrap;
-    background: rgb(230,230,232);
-    border-radius: 2px;
-    display: inline-block;
-    padding: 10px 15px;
-    margin: 0px 0 40px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    color: rgb(45,50,55);
+	tab-size: 4;
+	font-size: 16px;
+	line-height: 140%;
+	white-space: pre-wrap;
+	background: rgb(230,230,232);
+	border-radius: 2px;
+	display: inline-block;
+	padding: 10px 15px;
+	margin: 0px 0 40px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	color: rgb(45,50,55);
 }
 .styleguide-code:focus{
-    outline: none;
-    box-shadow: 0px 0px 3px 2px rgba(45,205,115,0.5), 0px 0px 0px 1px rgb(45,205,115);
+	outline: none;
+	box-shadow: 0px 0px 3px 2px rgba(45,205,115,0.5), 0px 0px 0px 1px rgb(45,205,115);
 }
 .styleguide-link{
-    color: rgb(40,175,95);
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
-    margin: 0 2px;
+	color: rgb(40,175,95);
+	text-decoration: none;
+	display: inline-block;
+	position: relative;
+	margin: 0 2px;
 }
 .styleguide-link:before{
-    content: "";
-    display: block;
-    position: absolute;
-    background: rgb(40,175,95);
-    width: 0%;
-    height: 3px;
-    bottom: -2px;
-    left: 0;
-    opacity: 0;
-    transition: width .3s ease .1s, opacity .3s ease .1s;
-    -webkit-transition: width .3s ease .1s, opacity .3s ease .1s;
+	content: "";
+	display: block;
+	position: absolute;
+	background: rgb(40,175,95);
+	width: 0%;
+	height: 3px;
+	bottom: -2px;
+	left: 0;
+	opacity: 0;
+	transition: width .3s ease .1s, opacity .3s ease .1s;
+	-webkit-transition: width .3s ease .1s, opacity .3s ease .1s;
 }
 .styleguide-link:hover:before{
-    opacity: 1;
-    width: 100%;
+	opacity: 1;
+	width: 100%;
 }
 
 /* Colors */
 .color{
-    background: rgb(200,200,200);
-    height: 250px;
-    position: relative;
-    border: 0px solid rgb(255,255,255);
-    border-bottom-width: 60px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.25);
-    margin-top: 20px;
-    margin-bottom: 20px;
+	background: rgb(200,200,200);
+	height: 250px;
+	position: relative;
+	border: 0px solid rgb(255,255,255);
+	border-bottom-width: 60px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.25);
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 .color:before,.color:after{
-    display: block;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 14px;
-    font-family: "Helvetica Neue", "Helvetica", "Arial";
-    color: rgb(60,60,60);
-    line-height: 100%;
-    position: absolute;
-    padding-left: 10px;
-    width: 100%;
-    height: 24px;
-    overflow: hidden;
+	display: block;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 14px;
+	font-family: "Helvetica Neue", Helvetica, Arial;
+	color: rgb(60,60,60);
+	line-height: 100%;
+	position: absolute;
+	padding-left: 10px;
+	width: 100%;
+	height: 24px;
+	overflow: hidden;
 }
 .color:before{
-    bottom: -38px;
+	bottom: -38px;
 }
 .color:after{
-    bottom: -55px;
-    color: rgb(140,140,140);
+	bottom: -55px;
+	color: rgb(140,140,140);
 }
 .shadow{
-    padding: 10px;
-    float: left;
-    margin: 15px;
-    color: rgb(0,135,190);
+	padding: 10px;
+	float: left;
+	margin: 15px;
+	color: rgb(0,135,190);
 }
 /*aside nav li:before{
-    content: "";
-    display: block;
-    width: 1px;
-    position: absolute;
-    height: 100%;
-    top: 50%;
-    left: -7px;
-    background: rgba(0,0,0,0.075);
+	content: "";
+	display: block;
+	width: 1px;
+	position: absolute;
+	height: 100%;
+	top: 50%;
+	left: -7px;
+	background: rgba(0,0,0,0.075);
 }
 aside nav li:after{
-    content: "";
-    display: block;
-    width: 7px;
-    height: 7px;
-    position: absolute;
-    top: 50%;
-    left: -7px;
-    transform: translate3d(-5px, -6px, 0);
-    -webkit-transform: translate3d(-5px, -6px, 0);
-    border: 2px solid rgb(40,175,95);
-    border-radius: 5px;
-    background: rgb(0,125,50);   
+	content: "";
+	display: block;
+	width: 7px;
+	height: 7px;
+	position: absolute;
+	top: 50%;
+	left: -7px;
+	transform: translate3d(-5px, -6px, 0);
+	-webkit-transform: translate3d(-5px, -6px, 0);
+	border: 2px solid rgb(40,175,95);
+	border-radius: 5px;
+	background: rgb(0,125,50);   
 }
 aside nav li:last-child:before{
-    display: none;
+	display: none;
 }*/

@@ -18,10 +18,10 @@
 		<div class="hide-sidebar"></div>
 		<nav>
 			<ul>
-				<li class="active"><a class="label" href="general.html">General</a></li>
+				<li><a class="label" href="general.html">General</a></li>
 				<li><a class="label" href="typography.html">Typography</a></li>
 				<li><a class="label" href="grid.html">Grid</a></li>
-				<li><a class="label" href="gui.html">GUI Elements</a></li>
+				<li class="active"><a class="label" href="gui.html">GUI Elements</a></li>
 				<li><a class="label" href="content-elements.html">Content Elements</a></li>
 			</ul>
 		</nav>
@@ -34,14 +34,14 @@
 				<div class="fixed">
 					<div class="intro">
 						<span class="chapter">Chapter</span>
-						<h2>General Information</h2>
-						<p>This section discusses colors and elements of design.</p>
+						<h2>GUI Elements</h2>
+						<p>This section common gui elements.</p>
 					</div>
 					<nav class="anchors">
 						<ul>
 							<lh>Sections</lh>
 							<li><a href="#general" class="label">Introduction</a></li>
-							<li><a href="#colors" class="label">Colors</a></li>
+							<li><a href="#buttons" class="label">Buttons</a></li>
 							<li><a href="#design-elements" class="label">Elements of design</a></li>
 						</ul>
 					</nav>
@@ -51,28 +51,136 @@
 				<!-- General -->
 				<section class="grid">
 					<a name="general" class="styleguide-headline">Introduction</a>
-					<p class="styleguide-paragraph span-7">This styleguide is supposed to give ready to use examples and code to for the app development which can be just copied and pasted. Additionally it is designed to explain the main idea of the design, so that new elements can be created from the guidelines in this document. If necessary the guidelines can be broken, this should not be done lightly but only after making sure that it is necessary. Following this guidelines will not only ensure an overall coherent design, but also an easy maintainability.</p>
 				</section>
-				<!-- Headlines -->
+				<!-- Buttons -->
 				<section class="grid">
-					<a class="styleguide-headline" name="colors">Colors</a>
+					<a class="styleguide-headline" name="buttons">Buttons</a>
 					<p class="styleguide-paragraph span-7 append-5">An h1 is only used for very important content like a users name on her profile. The color is either white or zupply-blue-dark.</p>
-					<div class="span-3 color brand"></div>
-					<div class="span-3 color brand-dark"></div>
-					<div class="span-3 color blue-dark"></div>
-					<div class="span-3 color accent"></div>
-					<div class="span-3 color black"></div>
-					<div class="span-3 color gray"></div>
-					<div class="span-3 color medium-gray"></div>
-					<div class="span-3 color light-gray"></div>
-					<div class="span-3 color white-gray"></div>
-					<div class="span-3 color white"></div>
-					<div class="span-3"></div>
-					<div class="span-3"></div>
-					<div class="span-3"></div>
-					<div class="span-3"></div>
-					<div class="span-3"></div>
-				</section>
+					<h3 class="styleguide-headline">Default button</h3>
+						<div>
+							<div class="margin-20-0 button span-auto">.button</div>
+							<div class="margin-20 button active span-auto">.button.active</div>
+						</div>
+<pre class="styleguide-code css">
+.button{
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+	border-radius: 4px;
+	border: 1px solid rgb(180,180,180);
+	color: rgb(60,60,60);
+	text-align: center;
+	padding: 7px 15px;
+	font-size: 1em;
+	background-color: rgb(235,235,235);
+	background-image: -webkit-linear-gradient(bottom, rgb(215,215,215), rgb(235,235,235));
+	background-image: linear-gradient(bottom, rgb(215,215,215), rgb(235,235,235));
+	cursor: pointer;
+	transition: border-color .5s ease .1s, box-shadow .2s ease;
+	-webkit-transition: border-color .5s ease .1s, box-shadow .2s ease;
+	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.05);
+}
+.button:hover{
+	border: 1px solid rgb(140,140,140);
+	background-color: rgb(235,235,235);
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25);
+}
+.button.active{
+	border: 1px solid rgb(140,140,140);
+	background-color: rgb(235,235,235);
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25);
+}
+</pre>
+<h3 class="styleguide-headline">Disabled button</h3>
+<div>
+	<div class="margin-20-0 button span-auto disabled">.button.disabled</div>
+</div>
+<pre class="styleguide-code css">
+.button.disabled, .button.disabled:hover{
+	color: rgb(140,140,140);
+	border-color: rgb(215,215,215);
+	box-shadow: none;
+	cursor: default;
+	background-color: rgb(235,235,235);
+	background-image: -webkit-linear-gradient(bottom, rgb(235,235,235), rgb(250,250,250));
+	background-image: linear-gradient(bottom, rgb(235,235,235), rgb(250,250,250));
+}
+</pre>
+<h3 class="styleguide-headline">Primary button</h3>
+<div>
+	<div class="margin-20-0 button span-auto primary">.button.primary</div>
+</div>
+<pre class="styleguide-code css">
+.button.primary{
+	background-color: rgb(40,155,195);
+	background-image: -webkit-linear-gradient(top, rgb(40,155,195), rgb(0,135,190));
+	background-image: linear-gradient(top, rgb(40,155,195), rgb(0,135,190));
+	color: rgb(250,250,250);
+	border-color: rgb(0,135,190);
+}
+.button.primary:hover{
+	border-color: rgb(20,95,150);
+}
+
+</pre>
+<h3 class="styleguide-headline">Button group</h3>
+<div>
+<ul class="button-group margin-20-0">
+	<li><a href="#" class="button">Button 1</a></li>
+	<li class="active"><a href="#" class="button active">Button 2</a></li>
+	<li><a href="#" class="button">Button 3</a></li>
+</ul>
+</div>
+<pre class="styleguide-code css span-6">
+.button-group{
+	padding: 0;
+	list-style: none;
+}
+.button-group.button{
+	float: left;
+	position: relative;
+	text-decoration: none;
+	border-radius: 0;
+	border-right: 0;
+}
+.button-group li{
+	float: left;
+	position: relative;
+	z-index: 1;
+}
+.button-group li:first-child.button{
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+.button-group li:last-child.button{
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-right: 1px solid rgb(180,180,180);
+}
+.button-group li:hover.button{
+	z-index: 10;
+	border-right: 0;
+}
+.button-group li:not(.active):hover.button{
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25), 1px 0px 0px 0px rgb(180,180,180);
+}
+.button-group li:hover:last-child.button{
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25);
+	border-right: 1px solid rgb(180,180,180);
+}
+</pre>
+<pre class="styleguide-code html span-6">
+	&lt;ul class="button-group">
+		&lt;li>
+			&lt;a href="#" class="button">Button 1&lt;/a>
+		&lt;/li>
+		&lt;li class="active">
+			&lt;a href="#" class="button active">Button 2&lt;/a>
+		&lt;/li>
+		&lt;li>
+			&lt;a href="#" class="button">Button 3&lt;/a>
+		&lt;/li>
+	&lt;/ul>
+</pre>
+</section>
 				<!-- copy -->
 				<section class="grid">
 					<a name="design-elements" class="styleguide-headline">Elements of design</a>

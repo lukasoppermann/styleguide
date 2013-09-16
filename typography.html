@@ -55,7 +55,7 @@
 				<!-- General -->
 				<section class="grid">
 					<a name="general" class="styleguide-headline">General Typography</a>
-					<p class="styleguide-paragraph span-7">There are two fonts used in Zupply, the "general font" is used mostly for labels and gui elements. The "accent font" is used for elements like headlines.</p>
+					<p class="styleguide-paragraph span-7">There are two fonts used in Zupply, the "general font" is used mostly for labels and gui elements. The "accent font" is used for elements like headlines. The desktop body size for type is 16px, all other font sizes are set in em.</p>
 					
 					<h3 class="styleguide-headline">General Font</h3>
 					<p class="styleguide-paragraph span-6">Helvetica Neue is used as the general font with Helvetica and Arial as a backup for users who do not have Helvetica Neue installed on their computer.</p>
@@ -74,41 +74,44 @@
 				<!-- Headlines -->
 				<section class="grid">
 					<a class="styleguide-headline" name="headlines">Headlines</a>
+					<div class="span-6">
 					<h1>h1. A very large headline.</h1>
-					<p class="styleguide-paragraph">An h1 is only used for very important content like a users name on her profile. The color is either white or zupply-blue-dark.</p>
-					<h2>h2. A large headline.</h2>
-					<p class="styleguide-paragraph">An h2 is used for page main headlines, etc. The color is either white or zupply-blue-dark.</p>
-					<h3>h3. The normal headline format.</h3>
-					<p class="styleguide-paragraph">An h3 is used for most headlines, for e.g. section headlines. The color is either white or zupply-blue-dark.</p>
-					<h4>h4. This is a medium priority headline.</h4>
-					<p class="styleguide-paragraph">An h4 is used for item headlines like project headlines in the project history in a users profile. The color is zupply-blue-dark.</p>
-					<h5>h5. This is a low priority headline.</h5>
-					<p class="styleguide-paragraph">An h5 is used for headlines within a section like headlines for paragraphs. The color is the default text color.</p>
-					<pre class="styleguide-code css">
+
+						<p class="styleguide-paragraph">An h1 is only used for very important content like a users name on her profile. The color is either white or zupply-blue-dark.</p>
+						<h2>h2. A large headline.</h2>
+						<p class="styleguide-paragraph">An h2 is used for page main headlines, etc. The color is either white or zupply-blue-dark.</p>
+						<h3>h3. The normal headline format.</h3>
+						<p class="styleguide-paragraph">An h3 is used for most headlines, for e.g. section headlines. The color is either white or zupply-blue-dark.</p>
+						<h4>h4. This is a medium priority headline.</h4>
+						<p class="styleguide-paragraph">An h4 is used for item headlines like project headlines in the project history in a users profile. The color is zupply-blue-dark.</p>
+						<h5>h5. This is a low priority headline.</h5>
+						<p class="styleguide-paragraph">An h5 is used for headlines within a section like headlines for paragraphs. The color is the default text color.</p>
+					</div>
+					<pre class="styleguide-code css span-6 margin-top-10">
 h1, h2, h3, h4, h5{
 	font-family: "ITC Officina Sans", Helvetica, Arial, Sans-serif;
 	font-weight: 600;
 	color: rgb(0,135,190);
 }
 h1{
-	font-size: 60px;
+	font-size: 3.7em;
 	line-height: 100%;
 }
 h2{
-	font-size: 24px;
+	font-size: 1.5em;
 	line-height: 130%;
 }
 h3{
-	font-size: 18px;
+	font-size: 1.1em;
 }
 h4{
-	font-size: 16px;
+	font-size: 1em;
 	color: rgb(0,135,190);
 	margin-bottom: 10px;
 	font-weight: 400;
 }
 h5{
-	font-size: 16px;
+	font-size: 1em;
 	color: inherit;
 	margin-bottom: 10px;
 }</pre>
@@ -124,7 +127,7 @@ h5{
 					</p>
 					<pre class="styleguide-code css">
 p{
-	font-size: 16px;
+	font-size: 1em;
 	font-family: "ITC Officina Sans", Helvetica, Arial, Sans-serif;
 	font-weight: 400;
 	color: rgb(60,60,60);
@@ -135,8 +138,8 @@ p{
 				<section class="grid">
 					<a name="links" class="styleguide-headline">Links & Special text formats</a>
 					<h3 class="styleguide-headline">Important link</h3>
-					<p>An <a class="important-link">important link</a> is designed to be noticed in a text.</p>
-					<pre class="styleguide-code css">
+					<p class="styleguide-paragraph span-6">An <a class="important-link">important link</a> is designed to be noticed in a text.</p>
+					<pre class="styleguide-code css span-6">
 a{
 	color: rgb(0,135,190);
 	text-decoration: underline;
@@ -147,8 +150,8 @@ a:hover{
 }
 </pre>
 					<h3 class="styleguide-headline">Show/read more link</h3>
-					<p>A show/read more link shows the user that she can get more information on a topic, once she reached the end of a text, but it does not distract while reading. <a class="read-more">read more</a></p>
-					<pre class="styleguide-code css">
+					<p class="styleguide-paragraph span-6">A show/read more link shows the user that she can get more information on a topic, once she reached the end of a text, but it does not distract while reading. <a class="read-more">read more</a></p>
+					<pre class="styleguide-code css span-6">
 a.read-more{
 	color: rgb(160,160,160);
 	text-decoration: underline;
@@ -161,15 +164,17 @@ a.read-more:hover{
 	color: rgb(0,135,190);
 }
 </pre>
-					<h3 class="styleguide-headline">Labels</h3>
-					<p>To show a user what kind of information is in a textarea, labels are used. The labels must be always present but not obtrusive. A label is clickable and sets the focus to the related field.</p>
-					
+				<h3 class="styleguide-headline">Labels</h3>
+				<div class="span-6">
+					<p class="styleguide-paragraph">To show a user what kind of information is in a textarea, labels are used. The labels must be always present but not obtrusive. A label is clickable and sets the focus to the related field.</p>
 					<label for="your_name" >Your name</label>
 					<input type="text" value="Anthony Parker" id="your_name" />
-					<pre class="styleguide-code css">
+				</div>
+				<pre class="styleguide-code css span-6">
 label{
 	color: rgb(160,160,160);
-	font-size: 14px;
+	font-size: 0.9em;
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
 	cursor: pointer;
 	transition: color .4s ease .1s;
 	-webkit-transition: color .4s ease .1s;
