@@ -10,9 +10,6 @@
 	<!-- <link rel="stylesheet" type="text/css" href="./libs/css/reset.css" media="screen" /> -->
 	<link rel="stylesheet" type="text/css" href="./libs/css/styleguide.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="./libs/css/your-style.css" media="screen" />
-	<style type="text/css" media="screen">
-		
-	</style>
 	<title>Styleguide - General Information</title>
 </head>
 <body>
@@ -52,35 +49,44 @@
 			</aside>
 			<article class="styleguide">
 				<!-- General -->
-				<section>
+				<section class="grid">
 					<a name="general" class="styleguide-headline">General Typography</a>
-					<p class="styleguide-paragraph">There are two fonts used in Zupply, the "general font" is used mostly for labels and gui elements. The "accent font" is used for elements like headlines.</p>
+					<p class="styleguide-paragraph span-7">There are two fonts used in Zupply, the "general font" is used mostly for labels and gui elements. The "accent font" is used for elements like headlines.</p>
 					
 					<h3 class="styleguide-headline">General Font</h3>
-					<p class="styleguide-paragraph">Helvetica Neue is used as the general font with Helvetica and Arial as a backup for users who do not have Helvetica Neue installed on their computer.</p>
+					<p class="styleguide-paragraph span-7">Helvetica Neue is used as the general font with Helvetica and Arial as a backup for users who do not have Helvetica Neue installed on their computer.</p>
 				</section>
 				<!-- Headlines -->
-				<section>
+				<section class="grid">
 					<a class="styleguide-headline" name="colors">Colors</a>
-					<p class="styleguide-paragraph">An h1 is only used for very important content like a users name on her profile. The color is either white or zupply-blue-dark.</p>
-					<div class="color brand"></div>
-					<div class="color brand-dark"></div>
-					<div class="color accent"></div>
-					<div class="color black"></div>
-					<div class="color gray"></div>
-					<div class="color medium-gray"></div>
-					<div class="color light-gray"></div>
-					<div class="color white-gray"></div>
-					<div class="color white"></div>
+					<p class="styleguide-paragraph span-7 append-5">An h1 is only used for very important content like a users name on her profile. The color is either white or zupply-blue-dark.</p>
+					<div class="span-3 color brand"></div>
+					<div class="span-3 color brand-dark"></div>
+					<div class="span-3 color accent"></div>
+					<div class="span-3 color black"></div>
+					<div class="span-3 color gray"></div>
+					<div class="span-3 color medium-gray"></div>
+					<div class="span-3 color light-gray"></div>
+					<div class="span-3 color white-gray"></div>
+					<div class="span-3 color white"></div>
+					<div class="span-3"></div>
+					<div class="span-3"></div>
+					<div class="span-3"></div>
+					<div class="span-3"></div>
+					<div class="span-3"></div>
 				</section>
 				<!-- copy -->
-				<section>
+				<section class="grid">
 					<a name="design-elements" class="styleguide-headline">Elements of design</a>
-					<h3 class="styleguide-headline">Radii</h3>
+					<h3 class="styleguide-headline">Rounded corner radii</h3>
+					<div class="span-6">
 					<p class="styleguide-paragraph">Zupply has two radii styles, one for elements like buttons and dialog boxes, and another style for circular elements.</p>
-					<div class="dialog">
+					<p class="styleguide-paragraph">The <strong>default radius</strong> for elements like buttons and dialog boxes is 4px. If an element has effectively two radii, because an element is inside another, the inner radius has to be smaller. By default this formula can be used <em>inner-radius = outer-radius - padding - border-width</em>. If this does not produce good results, the radius should be adjusted so that it seems visually correct.</p>
+					<p class="styleguide-paragraph">To create a <strong>circle</strong> the radius has to be set to 50%.</p>
+					</div>
+					<div class="reveal-modal span-6" style="padding: 20px 10px;">
 						<div class="circle">This is a circle</div>
-						<div class="button">Button</div>
+						<div class="button" style="position: absolute; bottom: 10px; right: 10px;">Button</div>
 					</div>
 <pre class="styleguide-code css">
 .circle{
@@ -88,66 +94,43 @@
 	border-radius: 50%;
 }
 .button{
-	border-radius: 5px;
+	border-radius: 4px;
 }
 </pre>
-					<h3 class="styleguide-headline">Lines</h3>
+<h3 class="styleguide-headline">Lines</h3>
+<div class="span-6">
 					<p class="styleguide-paragraph">Lines are sued to separate sections from each other.</p>
-					<hr></hr>
+					<hr style="margin-right: 20px;"></hr>
 					<p class="styleguide-paragraph">The same line attributes are used in tables, boxes and lists.</p>
-					<pre class="styleguide-code css">
+				</div>
+<pre class="styleguide-code css span-6">
 hr{
 	height: 0; /* reset default hr attributes */
 	border: 0; /* reset default hr attributes */
 	border-bottom: 1px solid rgb(215,215,215);
 }
 </pre>
-				</section>
-		
-				<section>
-					<a name="links" class="styleguide-headline">Links & Special text formats</a>
-					<h3 class="styleguide-headline">Important link</h3>
-					<p>An <a class="important-link">important link</a> is designed to be noticed in a text.</p>
-					<pre class="styleguide-code css">
-a{
-	color: rgb(0,135,190);
-	text-decoration: underline;
-	cursor: pointer;
+<h3 class="styleguide-headline">Shadow</h3>
+<div class="span-6">
+	<p class="styleguide-paragraph">Shadows are standardized and should be used to visually separate elements from the background or suggest that an object is clickable.</p>
+	<p class="styleguide-paragraph">The <strong>strong shadow</strong> is used for elements that have to stand out from a noise background, like the modal window. The <strong>default shadow</strong> is used for a buttons hover, while the <strong>minimal shadow</strong> is a buttons default shadow state. The <strong>light shadow</strong> is for elements like a calendar that are supposed to be separated but are not entirely clickable.</p>
+	<div class="shadow strong">Strong shadow</div>
+	<div class="shadow default">Default shadow</div>
+	<div class="shadow light">Light shadow</div>
+	<div class="shadow minimal">Minimal shadow</div>
+</div>
+<pre class="styleguide-code css span-6">
+.shadow.strong{
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.25);
 }
-a:hover{
-    text-decoration: none;
+.shadow.default{
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25);
 }
-</pre>
-					<h3 class="styleguide-headline">Show/read more link</h3>
-					<p>A show/read more link shows the user that she can get more information on a topic, once she reached the end of a text, but it does not distract while reading. <a class="read-more">read more</a></p>
-					<pre class="styleguide-code css">
-a.read-more{
-	color: rgb(140,140,140);
-	text-decoration: underline;
-	cursor: pointer;
-	transition: color .4s ease .1s;
-	-webkit-transition: color .4s ease .1s;
+.shadow.light{
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15);
 }
-a.read-more:hover{
-	text-decoration: none;
-	color: rgb(0,135,190);
-}
-</pre>
-					<h3 class="styleguide-headline">Labels</h3>
-					<p>To show a user what kind of information is in a textarea, labels are used. The labels must be always present but not obtrusive. A label is clickable and sets the focus to the related field.</p>
-					
-					<label for="your_name" >Your name</label>
-					<input type="text" value="Anthony Parker" id="your_name" />
-					<pre class="styleguide-code css">
-label{
-	color: rgb(140,140,140);
-	font-size: 14px;
-	cursor: pointer;
-	transition: color .4s ease .1s;
-	-webkit-transition: color .4s ease .1s;
-}
-label:hover{
-	color: rgb(0,135,190);
+.shadow.minimal{
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.05);
 }
 </pre>
 				</section>
