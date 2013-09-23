@@ -42,7 +42,7 @@
 							<lh>Sections</lh>
 							<li><a href="#general" class="label">Introduction</a></li>
 							<li><a href="#buttons" class="label">Buttons</a></li>
-							<li><a href="#design-elements" class="label">Elements of design</a></li>
+							<li><a href="#forms" class="label">Forms</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -51,6 +51,7 @@
 				<!-- General -->
 				<section class="grid">
 					<a name="general" class="styleguide-headline">Introduction</a>
+					<p class="styleguide-paragraph span-7 append-5">All GUI elements are fairly flat, with subtle shadows and gradients to show their usage and functionality or make them stand out from the background.</p>
 				</section>
 				<!-- Buttons -->
 				<section class="grid">
@@ -187,66 +188,16 @@
 	&lt;/ul>
 </pre>
 </section>
-				<!-- copy -->
-				<section class="grid">
-					<a name="design-elements" class="styleguide-headline">Elements of design</a>
-					<h3 class="styleguide-headline">Rounded corner radii</h3>
-					<div class="span-6">
-					<p class="styleguide-paragraph">Zupply has two radii styles, one for elements like buttons and dialog boxes, and another style for circular elements.</p>
-					<p class="styleguide-paragraph">The <strong>default radius</strong> for elements like buttons and dialog boxes is 4px. If an element has effectively two radii, because an element is inside another, the inner radius has to be smaller. By default this formula can be used <em>inner-radius = outer-radius - padding - border-width</em>. If this does not produce good results, the radius should be adjusted so that it seems visually correct.</p>
-					<p class="styleguide-paragraph">To create a <strong>circle</strong> the radius has to be set to 50%.</p>
-					</div>
-					<div class="reveal-modal span-6" style="padding: 20px 10px;">
-						<div class="circle">This is a circle</div>
-						<div class="button" style="position: absolute; bottom: 10px; right: 10px;">Button</div>
-					</div>
-<pre class="styleguide-code css">
-.circle{
-	overflow: hidden;
-	border-radius: 50%;
-}
-.button{
-	border-radius: 4px;
-}
-</pre>
-<h3 class="styleguide-headline">Lines</h3>
-<div class="span-6">
-					<p class="styleguide-paragraph">Lines are sued to separate sections from each other.</p>
-					<hr style="margin-right: 20px;"></hr>
-					<p class="styleguide-paragraph">The same line attributes are used in tables, boxes and lists.</p>
-				</div>
-<pre class="styleguide-code css span-6">
-hr{
-	height: 0; /* reset default hr attributes */
-	border: 0; /* reset default hr attributes */
-	border-bottom: 1px solid rgb(215,215,215);
-}
-</pre>
-<h3 class="styleguide-headline">Shadow</h3>
-<div class="span-6">
-	<p class="styleguide-paragraph">Shadows are standardized and should be used to visually separate elements from the background or suggest that an object is clickable.</p>
-	<p class="styleguide-paragraph">The <strong>strong shadow</strong> is used for elements that have to stand out from a noise background, like the modal window. The <strong>default shadow</strong> is used for a buttons hover, while the <strong>minimal shadow</strong> is a buttons default shadow state. The <strong>light shadow</strong> is for elements like a calendar that are supposed to be separated but are not entirely clickable.</p>
-	<div class="shadow strong">Strong shadow</div>
-	<div class="shadow default">Default shadow</div>
-	<div class="shadow light">Light shadow</div>
-	<div class="shadow minimal">Minimal shadow</div>
-</div>
-<pre class="styleguide-code css span-6">
-.shadow.strong{
-    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.25);
-}
-.shadow.default{
-    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25);
-}
-.shadow.light{
-    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15);
-}
-.shadow.minimal{
-    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.05);
-}
-</pre>
-				</section>
-			</article>
+<section class="grid">
+	<a name="forms" class="styleguide-headline">Form elements</a>
+	<p class="styleguide-paragraph span-7 append-5">All GUI elements are fairly flat, with subtle shadows and gradients to show their usage and functionality or make them stand out from the background.</p>
+	<div class="span-6">
+		<label for="normalInput">Label</label>
+		<input id="normalInput" type="text" placeholder="placeholder" value="" />
+	</div>	
+</section>
+<!-- end article -->
+</article>
 			
 		</div>
 	</div>
