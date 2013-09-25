@@ -138,7 +138,7 @@ section .button{
     color: rgb(60,60,60);
     text-align: center;
     padding: 7px 15px;
-    font-size: 1em;
+    font-size: 14px;
     float: left;
     background-color: rgb(235,235,235);
     background-image: -webkit-linear-gradient(bottom, rgb(215,215,215), rgb(235,235,235));
