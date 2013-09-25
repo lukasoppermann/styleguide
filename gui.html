@@ -102,13 +102,13 @@
 </div>
 <pre class="styleguide-code css">
 .button.disabled, .button.disabled:hover{
-	color: rgb(140,140,140);
-	border-color: rgb(215,215,215);
+	color: rgb(140,140,140); /* $gray */
+	border-color: rgb(215,215,215); /* $light-gray */
 	box-shadow: none;
 	cursor: default;
-	background-color: rgb(235,235,235);
-	background-image: -webkit-linear-gradient(bottom, rgb(235,235,235), rgb(250,250,250));
-	background-image: linear-gradient(bottom, rgb(235,235,235), rgb(250,250,250));
+	background-color: rgb(235,235,235); /* $white-gray */
+	background-image: -webkit-linear-gradient(bottom, rgb(235,235,235), rgb(250,250,250)); /* $medium-gray $white */
+	background-image: linear-gradient(bottom, rgb(235,235,235), rgb(250,250,250)); /* $medium-gray $white */
 }
 </pre>
 <h3 class="styleguide-headline">Primary button</h3>
@@ -117,14 +117,14 @@
 </div>
 <pre class="styleguide-code css">
 .button.primary{
-	background-color: rgb(40,155,195);
-	background-image: -webkit-linear-gradient(top, rgb(40,155,195), rgb(0,135,190));
-	background-image: linear-gradient(top, rgb(40,155,195), rgb(0,135,190));
-	color: rgb(250,250,250);
-	border-color: rgb(0,135,190);
+	background-color: rgb(40,155,195); /* $zupply-blue */
+	background-image: -webkit-linear-gradient(top, rgb(40,155,195), rgb(0,135,190)); /* $zupply-blue $zupply-blue-dark */
+	background-image: linear-gradient(top, rgb(40,155,195), rgb(0,135,190)); /* $zupply-blue $zupply-blue-dark */
+	color: rgb(250,250,250); /* $white */
+	border-color: rgb(0,135,190); /* $zupply-blue-dark */
 }
 .button.primary:hover{
-	border-color: rgb(20,95,150);
+	border-color: rgb(20,95,150); /* $blue-dark */
 }
 
 </pre>
@@ -160,18 +160,18 @@
 .button-group li:last-child.button{
 	border-top-right-radius: 4px;
 	border-bottom-right-radius: 4px;
-	border-right: 1px solid rgb(180,180,180);
+	border-right: 1px solid rgb(180,180,180); /* $medium-gray */
 }
 .button-group li:hover.button{
 	z-index: 10;
 	border-right: 0;
 }
 .button-group li:not(.active):hover.button{
-	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25), 1px 0px 0px 0px rgb(180,180,180);
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25), 1px 0px 0px 0px rgb(180,180,180); /* $shadow-default $medium-gray */
 }
 .button-group li:hover:last-child.button{
-	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25);
-	border-right: 1px solid rgb(180,180,180);
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25); /* $shadow-default */
+	border-right: 1px solid rgb(180,180,180);  /* $medium-gray */
 }
 </pre>
 <pre class="styleguide-code html span-6">
