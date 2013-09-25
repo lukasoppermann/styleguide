@@ -57,6 +57,7 @@ section a.read-more:hover{
 section label{
     color: rgb(140,140,140);
     font-size: 0.9em;
+	padding-right: 10px;
     cursor: pointer;
     transition: color .4s ease .1s;
     -webkit-transition: color .4s ease .1s;
@@ -68,10 +69,16 @@ section input{
     color: rgb(60,60,60);
     font-size: 1em;
     border: 0;
-    padding: 5px 3px;
+    padding: 7px 5px;
 	border-radius: 4px;
+	background: rgb(235,235,235);
+	transition: background .6s ease, box-shadow .6s ease;
+	-webkit-transition: background .6s ease, box-shadow .6s ease;
+	box-shadow: 0px 0px 0px 2px transparent;
 }
 section input:focus{
+	background: rgb(250,250,250);
+	color: rgb(40,155,195);
 	outline: none;
 	box-shadow: 0px 0px 0px 2px rgb(40,155,195);
 }

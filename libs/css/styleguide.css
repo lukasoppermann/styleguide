@@ -136,6 +136,7 @@ article{
 	width: calc(100% - 250px);
 	width: -webkit-calc(100% - 250px);
 	width: -moz-calc(100% - 250px);
+	padding-bottom: 60px;
 }
 aside{
 	color: rgb(250,250,252);
