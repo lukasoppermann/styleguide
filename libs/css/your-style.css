@@ -57,8 +57,9 @@ section a.read-more:hover{
 section label{
     color: rgb(140,140,140);
     font-size: 0.9em;
-	padding-right: 10px;
+	padding: 7px 10px 7px 5px;
     cursor: pointer;
+	float: left;
     transition: color .4s ease .1s;
     -webkit-transition: color .4s ease .1s;
 }
@@ -74,7 +75,9 @@ section input{
 	background: rgb(235,235,235);
 	transition: background .3s ease, box-shadow .3s ease;
 	-webkit-transition: background .3s ease, box-shadow .3s ease;
-	box-shadow: 0px 0px 0px 2px transparent;
+	box-shadow: 0px 0px 0px 2px rgb(235,235,235);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 section input:focus{
 	background: rgb(250,250,250);
@@ -83,6 +86,21 @@ section input:focus{
 	box-shadow: 0px 0px 0px 2px rgb(40,155,195);
 	transition: background .6s ease, box-shadow .6s ease;
 	-webkit-transition: background .6s ease, box-shadow .6s ease;
+}
+section .input-compared{
+	border-radius: 4px;
+	display: inline-block;
+	box-shadow: 0px 0px 0px 2px rgb(235,235,235);
+}
+section .input-compared input{
+	margin-top: 0;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+section .input-compared .old-value{
+	color: rgb(180,180,180);
+	float: left;
+	padding: 7px 5px;
 }
 .color.brand{ background: rgb(40,155,195); }
 .color.brand:before{ content: "Zupply-blue"; }
