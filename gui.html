@@ -190,8 +190,8 @@
 </section>
 <section class="grid">
 	<a name="forms" class="styleguide-headline">Form elements</a>
-	<p class="styleguide-paragraph span-7 append-5">All GUI elements are fairly flat, with subtle shadows and gradients to show their usage and functionality or make them stand out from the background.</p>
 	<div class="span-6">
+		<p class="styleguide-paragraph">All GUI elements are fairly flat, with subtle shadows and gradients to show their usage and functionality or make them stand out from the background.</p>
 		<br />
 		<div>
 			<label for="normalInput">Label</label>
@@ -205,7 +205,58 @@
 				<span class="old-value span-12">Old Value</span>
 			</div>	
 		</div>
-	</div>	
+		<br />
+		<br />
+<pre class="styleguide-code html span-12">
+&lt;label for="normalInput">Label&lt;/label>
+&lt;input id="normalInput" type="text" placeholder="placeholder" value="" />
+
+&lt;label for="comparedInput">Label&lt;/label>
+&lt;div class="input-compared span-4">
+	&lt;input id="comparedInput" type="text" placeholder="placeholder" />
+	&lt;span class="old-value">Old Value&lt;/span>
+&lt;/div>
+</pre>
+	</div>
+<pre class="styleguide-code css span-6">
+input{
+	color: rgb(60,60,60);
+	font-size: 1em;
+	border: 0;
+	padding: 7px 5px;
+	border-radius: 4px;
+	background: rgb(235,235,235);
+	transition: background .3s ease, box-shadow .3s ease;
+	-webkit-transition: background .3s ease, box-shadow .3s ease;
+	box-shadow: 0px 0px 0px 2px rgb(235,235,235);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+input:focus{
+	background: rgb(250,250,250);
+	color: rgb(40,155,195);
+	outline: none;
+	box-shadow: 0px 0px 0px 2px rgb(40,155,195);
+	transition: background .6s ease, box-shadow .6s ease;
+	-webkit-transition: background .6s ease, box-shadow .6s ease;
+}
+.input-compared{
+	border-radius: 4px;
+	display: inline-block;
+	box-shadow: 0px 0px 0px 2px rgb(235,235,235);
+}
+.input-compared input{
+	margin-top: 0;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+.input-compared .old-value{
+	color: rgb(180,180,180);
+	float: left;
+	padding: 7px 5px;
+}
+
+</pre>
 </section>
 <!-- end article -->
 </article>
