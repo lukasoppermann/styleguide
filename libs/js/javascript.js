@@ -31,6 +31,21 @@ $(function(){
     // prepare code
     $('.styleguide-code').set('@contentEditable','true');
     
+	// add get link button
+	$('a.styleguide-headline').add(EE('div', {'className': 'copy-link'}, 'get link'));
+	
+	// copy dialog
+	var $dialog = $('#dialog');
+	if( $dialog.length == 0 )
+	{
+		$dialog = $('body').add(EE('div', {'id': 'dialog'}, 'get link'));
+	}
+	
+	$('.copy-link').on('click', function()
+	{
+		$dialog.add(EE('input', {'className':'copy-link-input', 'value':$(this).trav('parentNode', 'a').get('@name')}));
+	});
+	
     // $('.styleguide-code.css').on('keyup', function(){
     //     var css = '';
     //     $('.styleguide-code').each(function(item){

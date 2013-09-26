@@ -245,7 +245,7 @@ a.styleguide-headline{
 	font-size: 18px;
 	padding-bottom: 15px;
 }
-a.styleguide-headline:before{
+/*a.styleguide-headline:before{
 	content: "get link";
 	display: block;
 	color: rgb(150,150,152);
@@ -258,6 +258,24 @@ a.styleguide-headline:before{
 	border-radius: 2px;
 }
 a.styleguide-headline:hover:before{
+	background: rgb(45,205,115);
+	color: rgb(250,250,252);
+}*/
+.styleguide-headline .copy-link{
+	content: "get link";
+	display: block;
+	color: rgb(150,150,152);
+	font-size: 14px;
+	float: right;
+	margin-top: -10px;
+	padding: 10px;
+	text-transform: lowercase;
+	z-index: 10;
+	border-radius: 2px;
+	transition: background .3s ease .1s, color .3s ease .1s;
+	-webkit-transition: background .3s ease .1s, color .3s ease .1s;
+}
+a.styleguide-headline .copy-link:hover{
 	background: rgb(45,205,115);
 	color: rgb(250,250,252);
 }
