@@ -245,22 +245,6 @@ a.styleguide-headline{
 	font-size: 18px;
 	padding-bottom: 15px;
 }
-/*a.styleguide-headline:before{
-	content: "get link";
-	display: block;
-	color: rgb(150,150,152);
-	font-size: 14px;
-	float: right;
-	margin-top: -10px;
-	padding: 10px;
-	text-transform: lowercase;
-	z-index: 10;
-	border-radius: 2px;
-}
-a.styleguide-headline:hover:before{
-	background: rgb(45,205,115);
-	color: rgb(250,250,252);
-}*/
 .styleguide-headline .copy-link{
 	content: "get link";
 	display: block;
@@ -360,32 +344,69 @@ a.styleguide-headline .copy-link:hover{
 	padding: 10px;
 	float: left;
 	margin: 15px;
-	color: rgb(0,135,190);
+	color: rgb(60,60,60);
 }
-/*aside nav li:before{
-	content: "";
-	display: block;
-	width: 1px;
-	position: absolute;
+#dialog{
+	background: rgb(255,255,255);
+	border-radius: 1px;
+	box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+	z-index: 905;
+	min-height: 300px;
+	min-width: 500px;
+	position: fixed;
+	left: 50%;
+	top: 20%;
+	transform: translate3d(-50%, -50%, 0);
+	-webkit-transform: translate3d(-50%, -50%, 0);
+	transition: opacity .4s ease, top .4s ease;
+	-webkit-transition: opacity .4s ease, top .4s ease;
+	opacity: 0;
+}
+#dialog.active{ 
+	opacity: 1;
+	top: 50%;
+}
+#dialog_overlay{
 	height: 100%;
-	top: 50%;
-	left: -7px;
-	background: rgba(0,0,0,0.075);
+	width: 100%;
+	position: fixed;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	background: rgba(255, 255, 255, 0.9);
+	z-index: 0;
+	transition: opacity .5s ease, z-index .5s ease;
+	-webkit-transition: opacity .5s ease, z-index .5s ease;
 }
-aside nav li:after{
-	content: "";
-	display: block;
-	width: 7px;
-	height: 7px;
-	position: absolute;
-	top: 50%;
-	left: -7px;
-	transform: translate3d(-5px, -6px, 0);
-	-webkit-transform: translate3d(-5px, -6px, 0);
-	border: 2px solid rgb(40,175,95);
+#dialog_overlay.active{
+	opacity: 1;
+	z-index: 900;
+}
+#copyInput{
+	margin: 5%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	font-size: 16px;
+	width: 90%;
+	padding: 10px 5px;
 	border-radius: 5px;
-	background: rgb(0,125,50);   
+	border: 2px solid rgb(235,235,235);
+	transition: border .4s ease;
+	-webkit-transition: border .4s ease;
 }
-aside nav li:last-child:before{
-	display: none;
-}*/
+#copyInput:focus{
+	outline: none;
+	border: 2px solid rgb(40,175,95);
+}
+::selection{
+	color: rgb(255,255,255);
+	background: rgb(40,175,95);
+}
+::-webkit-selection{
+	color: rgb(255,255,255);
+	background: rgb(40,175,95);
+}
+::-moz-selection{
+	color: rgb(255,255,255);
+	background: rgb(40,175,95);
+}

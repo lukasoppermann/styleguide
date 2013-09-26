@@ -6,6 +6,7 @@ $(function(){
     
     // set article to 100% if less than 100%
     var _wrapper = $('article'),
+		_body = $('body'),
         windowHeight = parseInt($('body').get('$height'));
     if(parseInt( _wrapper.get('$height')) < windowHeight - 60 )
     {
@@ -35,15 +36,31 @@ $(function(){
 	$('a.styleguide-headline').add(EE('div', {'className': 'copy-link'}, 'get link'));
 	
 	// copy dialog
-	var $dialog = $('#dialog');
-	if( $dialog.length == 0 )
+	var $dialog = $('#dialog'), $overlay = $('#dialog_overlay');
+	if($dialog.length == 0)
 	{
-		$dialog = $('body').add(EE('div', {'id': 'dialog'}, 'get link'));
+		_body.add(EE('div', {'id': 'dialog'}));
+		$dialog = $('#dialog');
+	}
+	if($overlay.length == 0)
+	{
+		_body.addFront(EE('div', {'id': 'dialog_overlay'}));
+		$overlay = $('#dialog_overlay');
 	}
 	
+
 	$('.copy-link').on('click', function()
 	{
-		$dialog.add(EE('input', {'className':'copy-link-input', 'value':$(this).trav('parentNode', 'a').get('@name')}));
+		$overlay.set('+active');
+		$dialog.set('+active').add(EE('input', {'id':'copyInput', '@value':location.hostname+location.pathname+'#'+$(this).trav('parentNode', 'a').get('@name')}));
+		
+		document.getElementById("copyInput").select();
+		
+	});
+	
+	$overlay.on('click', function(){
+		$overlay.set('-active');
+		$dialog.set('-active').select('*', true).remove();
 	});
 	
     // $('.styleguide-code.css').on('keyup', function(){
