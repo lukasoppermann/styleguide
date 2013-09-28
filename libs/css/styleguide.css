@@ -214,9 +214,6 @@ section{
 	-moz-box-sizing: border-box;
 	padding: 20px 3%;
 }
-*[class*="styleguide-"]{
-	font-family: "Helvetica Neue", Helvetica, Arial !important;   
-}
 .margin-top-20{ margin-top: 20px; }
 .margin-bottom-20{ margin-bottom: 20px; }
 .margin-20{ margin: 20px; }
@@ -241,12 +238,10 @@ a.styleguide-headline{
 	border-bottom: 2px solid rgb(235,235,235);   
 	text-transform: uppercase;
 	letter-spacing: 0.03em;
-	cursor: pointer;
 	font-size: 18px;
 	padding-bottom: 15px;
 }
 .styleguide-headline .copy-link{
-	content: "get link";
 	display: block;
 	color: rgb(150,150,152);
 	font-size: 14px;
@@ -254,6 +249,7 @@ a.styleguide-headline{
 	margin-top: -10px;
 	padding: 10px;
 	text-transform: lowercase;
+	cursor: pointer;
 	z-index: 10;
 	border-radius: 2px;
 	transition: background .3s ease .1s, color .3s ease .1s;
@@ -263,10 +259,9 @@ a.styleguide-headline .copy-link:hover{
 	background: rgb(45,205,115);
 	color: rgb(250,250,252);
 }
-.styleguide-code{
+/*.styleguide-code{
 	tab-size: 4;
 	font-size: 16px;
-	line-height: 140%;
 	white-space: pre-wrap;
 	background: rgb(230,230,232);
 	border-radius: 2px;
@@ -276,7 +271,7 @@ a.styleguide-headline .copy-link:hover{
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	color: rgb(45,50,55);
-}
+}*/
 .styleguide-code:focus{
 	outline: none;
 	box-shadow: 0px 0px 3px 2px rgba(45,205,115,0.5), 0px 0px 0px 1px rgb(45,205,115);
@@ -351,7 +346,7 @@ a.styleguide-headline .copy-link:hover{
 	border-radius: 1px;
 	box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
 	z-index: 905;
-	min-height: 300px;
+	height: 0;
 	min-width: 500px;
 	position: fixed;
 	left: 50%;
@@ -363,6 +358,8 @@ a.styleguide-headline .copy-link:hover{
 	opacity: 0;
 }
 #dialog.active{ 
+	min-height: 300px;
+	height: 100%;
 	opacity: 1;
 	top: 50%;
 }
@@ -396,17 +393,17 @@ a.styleguide-headline .copy-link:hover{
 }
 #copyInput:focus{
 	outline: none;
-	border: 2px solid rgb(40,175,95);
+	border: 2px solid rgb(45, 205, 115);
 }
 ::selection{
 	color: rgb(255,255,255);
-	background: rgb(40,175,95);
+	background: rgb(45, 205, 115);
 }
 ::-webkit-selection{
 	color: rgb(255,255,255);
-	background: rgb(40,175,95);
+	background: rgb(45, 205, 115);
 }
 ::-moz-selection{
 	color: rgb(255,255,255);
-	background: rgb(40,175,95);
+	background: rgb(45, 205, 115);
 }

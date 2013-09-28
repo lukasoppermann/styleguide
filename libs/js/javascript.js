@@ -30,7 +30,9 @@ $(function(){
         }
     });
     // prepare code
-    $('.styleguide-code').set('@contentEditable','true');
+	var $code = $('pre code');
+	
+    $code.set({'@contentEditable':'false'}).fill($code.text().replace(/^\s\s*/g, '').replace(/\s\s*$/g, ''));
     
 	// add get link button
 	$('a.styleguide-headline').add(EE('div', {'className': 'copy-link'}, 'get link'));
