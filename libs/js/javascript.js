@@ -29,11 +29,37 @@ $(function(){
             $this.set('+styleguide-link');
         }
     });
+	// 
+	$('code').each(function(item){
+		var $this = $(item),
+			classes = $(item).get('@class')+' line-numbers',
+			langClass = 'language-css',
+			array = ['css', 'js', 'html', 'markup', 'php', 'mysql', 'http'];
+			
+			for( var i in array )
+			{
+				if( classes.indexOf(array[i]) != -1 )
+				{
+					array[i] == 'html' ? array[i] = 'markup' : '';
+					langClass = 'language-'+array[i];
+					break;
+				}
+			}
+			
+			classes += ' '+langClass;
+			
+			
+		$this.replace( EE('pre', {'className':classes}, [EE('code', {'@contentEditable':'true', 'className':langClass}, $this.text().replace(/^\s\s*/g, '').replace(/\s\s*$/g, '') )] ) );
+		
+	});
     // prepare code
 	var $code = $('pre code');
-	
-    $code.set({'@contentEditable':'false'}).fill($code.text().replace(/^\s\s*/g, '').replace(/\s\s*$/g, ''));
-    
+    // $code.set({'@contentEditable':'true'}).fill($code.text().replace(/^\s\s*/g, '').replace(/\s\s*$/g, ''));
+    // $code.on('focus', function(){
+    // 	$code.trav('parentNode').set('+focus');
+    // }).on('blur', function(){
+    // 	$code.trav('parentNode').set('-focus');    	
+    // });
 	// add get link button
 	$('a.styleguide-headline').add(EE('div', {'className': 'copy-link'}, 'get link'));
 	

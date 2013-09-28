@@ -272,10 +272,6 @@ a.styleguide-headline .copy-link:hover{
 	-moz-box-sizing: border-box;
 	color: rgb(45,50,55);
 }*/
-.styleguide-code:focus{
-	outline: none;
-	box-shadow: 0px 0px 3px 2px rgba(45,205,115,0.5), 0px 0px 0px 1px rgb(45,205,115);
-}
 .styleguide-link{
 	color: rgb(40,175,95);
 	text-decoration: none;
