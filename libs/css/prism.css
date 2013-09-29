@@ -26,8 +26,7 @@ pre[class*="language-"]{
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
 	tab-size: 4;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
+	overflow-x: auto;
 	-webkit-hyphens: none;
 	-moz-hyphens: none;
 	-ms-hyphens: none;
@@ -35,21 +34,23 @@ pre[class*="language-"]{
 }
 /* Code blocks */
 pre[class*="language-"] {
-	padding: 10px;
 	margin: .5em 0;
 	overflow: auto;	
 	border-radius: 0.3em;
+	padding: 10px 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
-
+code[class*="language-"]{
+	padding: 12px 0;
+}
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
 	background: rgb(75,75,75);
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
-	border-radius: .3em;
-}
+
 
 .token.comment,
 .token.prolog,
@@ -120,16 +121,20 @@ pre.line-numbers {
 	counter-reset: linenumber;
 }
 pre.line-numbers > code {
+	margin: 0;
 	position: relative;
 }
 .line-numbers .line-numbers-rows {
 	position: absolute;
 	display: block;
 	pointer-events: none;
-	top: -12px;
+	top: 0px;
 	font-size: 16px;
 	left: -3.8em;
+	margin: 0;
 	min-height: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	padding: 12px 0;
 	width: 3em; /* works for line-numbers below 1000 lines */
 	letter-spacing: -1px;
@@ -141,6 +146,7 @@ pre.line-numbers > code {
 
 }
 .line-numbers-rows > span {
+	width: 100%;
 	line-height: 130%;
 	pointer-events: none;
 	display: block;

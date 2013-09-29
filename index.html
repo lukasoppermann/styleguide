@@ -10,7 +10,6 @@
 	<!-- <link rel="stylesheet" type="text/css" href="./libs/css/reset.css" media="screen" /> -->
 	<link rel="stylesheet" type="text/css" href="./libs/css/styleguide.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="./libs/css/your-style.css" media="screen" />
-	<link rel="stylesheet" type="text/css" href="./libs/css/prism.css" media="screen" />
 	<title>Styleguide - General Information</title>
 </head>
 <body>
@@ -88,7 +87,7 @@
 						<div class="circle">This is a circle</div>
 						<div class="button" style="position: absolute; bottom: 10px; right: 10px;">Button</div>
 					</div>
-<pre class="styleguide-code line-numbers"><code class="language-css">
+<code class="span-6 css">
 .circle{
 	overflow: hidden;
 	border-radius: 50%; /* $circle-radius */
@@ -96,7 +95,7 @@
 .button{
 	border-radius: 4px; /* $default-radius */
 }
-</code></pre>
+</code>
 <h3 class="styleguide-headline">Lines</h3>
 <div class="span-6">
 					<p class="styleguide-paragraph">Lines are sued to separate sections from each other.</p>
@@ -119,7 +118,7 @@ hr{
 	<div class="shadow light">Light shadow</div>
 	<div class="shadow minimal">Minimal shadow</div>
 </div>
-<code class="span-6">
+<code class="span-6 css">
 .shadow.strong{
     box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.25);
 }
@@ -138,7 +137,7 @@ hr{
 				<section class="grid">
 					<a name="animations" class="styleguide-headline">Transitions & Animations</a>
 						<p class="styleguide-paragraph span-6">The default transition is used for all css transitions where it is not especially necessary to change it. If not otherwise defined all changes should be of css properties should be transitioned. There is a In-transition and an Out-transition. The Out-transition is half the time, because the focus shifts away from this object quickly.</p>
-<pre class="styleguide-code css span-6">
+<code class="span-6 css">
 /* transition-in */
 	transition: propertyOne .6s ease, propertyTwo .6s ease;
 	-webkit-transition: propertyOne .6s ease, propertyTwo .6s ease;
@@ -146,7 +145,7 @@ hr{
 /* transition-out */
 	transition: propertyOne .3s ease, propertyTwo .3s ease;
 	-webkit-transition: propertyOne .3s ease, propertyTwo .3s ease;
-</pre>
+</code>
 				</section>
 </article>
 			

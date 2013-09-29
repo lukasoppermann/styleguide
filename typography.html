@@ -59,17 +59,17 @@
 					
 					<h3 class="styleguide-headline">General Font</h3>
 					<p class="styleguide-paragraph span-6">Helvetica Neue is used as the general font with Helvetica and Arial as a backup for users who do not have Helvetica Neue installed on their computer.</p>
-					<pre class="styleguide-code css span-6">
+<code class="span-6 css">
 {
 	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
-}</pre>
+}</code>
 					<h3 class="styleguide-headline">Accent Font</h3>
 					<p class="styleguide-paragraph span-6">ITC Officina Sans (alternatively <a href="https://www.google.com/fonts/specimen/Source+Sans+Pro">Source Sans Pro</a>) is used as the accent font for Headlines and special elements.</p>
-					<pre class="styleguide-code css span-6">
+<code class="span-6 css">
 {
 	font-family: "ITC Officina Sans", Helvetica, Arial, Sans-serif;
 	font-family: "Source Sans Pro", Helvetica, Arial, Sans-serif;	
-}</pre>
+}</code>
 				</section>
 				<!-- Headlines -->
 				<section class="grid">
@@ -87,7 +87,7 @@
 						<h5>h5. This is a low priority headline.</h5>
 						<p class="styleguide-paragraph">An h5 is used for headlines within a section like headlines for paragraphs. The color is the default text color.</p>
 					</div>
-					<pre class="styleguide-code css span-6 margin-top-10">
+<code class="span-6 css">
 h1, h2, h3, h4, h5{
 	font-family: "ITC Officina Sans", Helvetica, Arial, Sans-serif;
 	font-weight: 600;
@@ -113,7 +113,7 @@ h5{
 	font-size: 1em;
 	color: inherit;
 	margin-bottom: 10px;
-}</pre>
+}</code>
 				</section>
 				<!-- copy -->
 				<section class="grid">
@@ -124,21 +124,21 @@ h5{
 					Lorem One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.
 				</p>
 					</p>
-					<pre class="styleguide-code css">
+<code class="span-6 css">
 p{
 	font-size: 1em;
 	font-family: "ITC Officina Sans", Helvetica, Arial, Sans-serif;
 	font-weight: 400;
 	color: rgb(60,60,60);  /* $black */
 }
-</pre>
+</code>
 				</section>
 		
 				<section class="grid">
 					<a name="links" class="styleguide-headline">Links & Special text formats</a>
 					<h3 class="styleguide-headline">Important link</h3>
 					<p class="styleguide-paragraph span-6">An <a class="important-link">important link</a> is designed to be noticed in a text.</p>
-					<pre class="styleguide-code css span-6">
+<code class="span-6 css">
 a{
 	color: rgb(0,135,190); /* $zupply-blue-dark */
 	text-decoration: underline;
@@ -147,10 +147,10 @@ a{
 a:hover{
     text-decoration: none;
 }
-</pre>
+</code>
 					<h3 class="styleguide-headline">Show/read more link</h3>
 					<p class="styleguide-paragraph span-6">A show/read more link shows the user that she can get more information on a topic, once she reached the end of a text, but it does not distract while reading. <a class="read-more">read more</a></p>
-					<pre class="styleguide-code css span-6">
+<code class="span-6 css">
 a.read-more{
 	color: rgb(140,140,140); /* $gray */
 	text-decoration: underline;
@@ -162,14 +162,14 @@ a.read-more:hover{
 	text-decoration: none;
 	color: rgb(0,135,190); /* $zupply-blue-dark */
 }
-</pre>
+</code>
 				<h3 class="styleguide-headline">Labels</h3>
 				<div class="span-6">
 					<p class="styleguide-paragraph">To show a user what kind of information is in a textarea, labels are used. The labels must be always present but not obtrusive. A label is clickable and sets the focus to the related field.</p>
 					<label for="your_name" >Your name</label>
 					<input type="text" value="Anthony Parker" id="your_name" />
 				</div>
-				<pre class="styleguide-code css span-6">
+<code class="span-6 css">
 label{
 	color: rgb(140,140,140); /* $gray */
 	font-size: 0.9em;
@@ -182,7 +182,7 @@ label{
 label:hover{
 	color: rgb(0,135,190); /* $zupply-blue-dark */
 }
-</pre>
+</code>
 				</section>
 			</article>
 			
@@ -190,6 +190,7 @@ label:hover{
 	</div>
 	<script type="text/javascript" charset="utf-8" src="./libs/js/minified-2.0.js"></script>
 	<script type="text/javascript" charset="utf-8" src="./libs/js/scrollOffset.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./libs/js/prism.js"></script>
 	<script type="text/javascript" charset="utf-8" src="./libs/js/javascript.js"></script>
 </body>
 </html>
