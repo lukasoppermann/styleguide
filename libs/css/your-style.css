@@ -312,3 +312,53 @@ section .checkbox-label{
 	padding: 3px 0 4px 55px;
 	font-size: 0.9em;
 }
+.loader{
+	background: transparent;
+  position:relative;
+}
+.loader .loading-circle{
+  /* absolute position with 3d animation = render layer */
+  position: absolute;
+  border:3px solid transparent;
+  border-top: 3px solid rgb(40,155,195);
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  left:0px;
+  top:0px;
+	background: transparent;
+	box-shadow: none;
+  /* shared animation */
+  -webkit-animation: rotate 1s linear infinite; /* Safari 4+ */
+  -moz-animation:    rotate 1s linear infinite; 
+  -o-animation:      rotate 1s linear infinite; /* Opera 12+ */
+  animation:         rotate 1s linear infinite; /* IE 10+ */
+}
+.loader .loading-label{
+	margin-left: 50px;
+	padding-top: 5px;
+	font-weight: bold;
+	color: rgb(40,155,195);
+}
+
+@-webkit-keyframes rotate {
+  /* rotate on 3d transform for best perf, it ensures GPU accelerated animation */
+  from {
+    -webkit-transform: rotateZ(360deg);
+  }
+  to {
+    -webkit-transform: rotateZ(0deg);
+  }
+}
+@-moz-keyframes rotate {
+  from { transform: rotateZ(360deg); }
+  to { transform: rotateZ(0deg);}
+}
+@-o-keyframes rotate {
+  from { transform: rotateZ(360deg); }
+  to { transform: rotateZ(0deg);}
+}
+@keyframes rotate {
+  from { transform: rotateZ(360deg); }
+  to { transform: rotateZ(0deg);}
+}

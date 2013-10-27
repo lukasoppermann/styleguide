@@ -146,6 +146,31 @@ hr{
 	transition: propertyOne .3s ease, propertyTwo .3s ease;
 	-webkit-transition: propertyOne .3s ease, propertyTwo .3s ease;
 </code>
+
+<h3 class="styleguide-headline">Loading spinner</h3>
+<div class="span-6">
+	<p class="styleguide-paragraph">Shadows are standardized and should be used to visually separate elements from the background or suggest that an object is clickable.</p>
+	<p class="styleguide-paragraph">The <strong>strong shadow</strong> is used for elements that have to stand out from a noise background, like the modal window. The <strong>default shadow</strong> is used for a buttons hover, while the <strong>minimal shadow</strong> is a buttons default shadow state. The <strong>light shadow</strong> is for elements like a calendar that are supposed to be separated but are not entirely clickable.</p>
+	<div class='loader'>
+	  <div class='loading-circle'></div>
+		<div class="loading-label">Loading data</div>
+	</div>
+</div>
+<code class="span-6 css">
+.shadow.strong{
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.25);
+}
+.shadow.default{
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25);
+}
+.shadow.light{
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15);
+}
+.shadow.minimal{
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.05);
+}
+</code>
+
 				</section>
 </article>
 			
