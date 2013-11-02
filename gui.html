@@ -113,10 +113,13 @@
 }
 </code>
 <h3 class="styleguide-headline">Primary button</h3>
-<div>
+<div class="span-6">
 	<div class="margin-20-0 button span-auto primary">.button.primary</div>
 </div>
-<code class="css">
+<div class="span-6" style="background: rgb(40,155,195); padding: 0px 20px; box-sizing: border-box; -moz-box-sizing: border-box; border-radius: 4px;">
+	<div class="margin-20-0 button span-auto white">.button.white</div>
+</div>
+<code class="css span-6">
 .button.primary{
 	background-color: rgb(40,155,195); /* $zupply-blue */
 	background-image: -webkit-linear-gradient(top, rgb(40,155,195), rgb(0,135,190)); /* $zupply-blue $zupply-blue-dark */
@@ -127,7 +130,18 @@
 .button.primary:hover{
 	border-color: rgb(20,95,150); /* $blue-dark */
 }
-
+</code>
+<code class="css span-6">
+.button.white{
+	background-color: rgb(250,250,250); /* $white */
+	background-image: -webkit-linear-gradient(top, rgb(250,250,250), rgb(235,235,235)); /* $white $white-gray */
+	background-image: linear-gradient(top, rgb(250,250,250), rgb(235,235,235)); /* $white $white-gray */
+	color: rgb(0,135,190); /* $zupply-blue-dark */
+	border-color: transparent; 
+}
+.button.white:hover{
+	border-color: transparent;
+}
 </code>
 <h3 class="styleguide-headline">Button group</h3>
 <div>
