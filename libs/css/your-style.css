@@ -381,8 +381,8 @@ section .loading-button .loading-circle{
   position: absolute;
 	display: block;
   border:3px solid transparent;
-  border-top: 3px solid rgb(250,250,250);
-  border-right: 3px solid rgb(250,250,250);
+  border-top: 3px solid rgb(250,250,250); /* $white */
+  border-right: 3px solid rgb(250,250,250); /* $white */
   border-radius: 50%;
   height: 12px;
   width: 12px;
@@ -395,4 +395,20 @@ section .loading-button .loading-circle{
   -moz-animation:    rotate 1s linear infinite; 
   -o-animation:      rotate 1s linear infinite; /* Opera 12+ */
   animation:         rotate 1s linear infinite; /* IE 10+ */
+}
+.overlay-bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(235,235,235,0.8); /* $white-gray */
+	height: 100%;
+	width: 100%;
+}
+.overlay-bg .loader{
+	-webkit-font-smoothing: antialiased;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%,-50%,0);
+	-webkit-transform: translate3d(-50%,-50%,0);
 }

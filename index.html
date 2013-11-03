@@ -164,7 +164,7 @@ hr{
 .loader .loading-circle{
 	position: absolute;
 	border:3px solid transparent;
-	border-top: 3px solid rgb(40,155,195);
+	border-top: 3px solid rgb(40,155,195); /* $brand */
 	border-radius: 50%;
 	height: 30px;
 	width: 30px;
@@ -182,7 +182,7 @@ hr{
 	margin-left: 50px;
 	padding-top: 5px;
 	font-weight: bold;
-	color: rgb(40,155,195);
+	color: rgb(40,155,195); /* $brand */
 }
 </code>
 <code class="span-6 css">
@@ -219,8 +219,8 @@ hr{
 	position: absolute;
 	display: block;
 	border:3px solid transparent;
-	border-top: 3px solid rgb(250,250,250);
-	border-right: 3px solid rgb(250,250,250);
+	border-top: 3px solid rgb(250,250,250); /* $white */
+	border-right: 3px solid rgb(250,250,250); /* $white */
 	border-radius: 50%;
 	height: 12px;
 	width: 12px;
@@ -233,6 +233,34 @@ hr{
 	-moz-animation:    rotate 1s linear infinite; 
 	-o-animation:      rotate 1s linear infinite;
 	animation:         rotate 1s linear infinite;
+}
+</code>
+
+<h3 class="styleguide-headline">Full page loading</h3>
+<div style="background-color: rgb(40,155,195); height:200px; border-radius: 4px; position: relative;" class="span-4">
+	<div class="overlay-bg">
+		<div class='loader'>
+		  <div class='loading-circle'></div>
+			<div class="loading-label">Loading ...</div>
+		</div>
+	</div>
+</div>
+<code class="span-8 css">
+.overlay-bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(235,235,235,0.8); /* $white-gray */
+	height: 100%;
+	width: 100%;
+}
+.overlay-bg .loader{
+	-webkit-font-smoothing: antialiased;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%,-50%,0);
+	-webkit-transform: translate3d(-50%,-50%,0);
 }
 </code>
 
