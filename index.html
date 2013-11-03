@@ -264,6 +264,121 @@ hr{
 }
 </code>
 
+<h3 class="styleguide-headline">Animation for changing values</h3>
+<div class="span-12">
+	<div>
+		<label for="addValue">Empty, adding value</label>
+		<div class="input" style="width: 120px;"><span class="added-value">Value</span></div>
+	</div>
+	<br /><br />
+	<div>
+		<div>
+			<label for="changeValue">Changing value</label>
+			<div class="input input-change" style="width: 120px;">
+				<span class="old-value">Old Value</span>
+				<span class="new-value">New Value</span>
+			</div>
+		</div>	
+	</div>
+</div>
+<code class="span-6 css">
+/* adding fade-in animation */
+-webkit-animation: fade-in 2s ease infinite;
+-moz-animation:    fade-in 2s ease infinite;
+-o-animation:      fade-in 2s ease infinite;
+animation:         fade-in 2s ease infinite;
+
+/* adding fade-slide-out animation */
+-webkit-animation: fade-slide-out 2s ease infinite;
+-moz-animation:    fade-slide-out 2s ease infinite;
+animation:         fade-slide-out 2s ease infinite;
+
+/* adding fade-slide-in animation */
+-webkit-animation: fade-slide-in 2s ease infinite;
+-moz-animation:    fade-slide-in 2s ease infinite;
+animation:         fade-slide-in 2s ease infinite;
+
+/* fade-in animation */
+@-webkit-keyframes fade-in {
+  from { opacity: 0.0;}
+  to { opacity: 1.0;}
+}
+@-moz-keyframes fade-in {
+  from { opacity: 0.0;}
+  to { opacity: 1.0;}
+}
+@-o-keyframes fade-in {
+  from { opacity: 0.0;}
+  to { opacity: 1.0;}
+}
+@keyframes fade-in {
+  from { opacity: 0.0;}
+  to { opacity: 1.0;}
+}
+</code>
+<code class="span-6 css">
+/* fade-slide-in & fade-slide-out animation */
+@-webkit-keyframes fade-slide-in {
+  from { 
+		opacity: 0.0;
+		margin-top: 0;
+	}
+  to { 
+		opacity: 1.0;
+		margin-top: -30px;
+	}
+}
+@-webkit-keyframes fade-slide-out {
+  from { 
+		opacity: 1.0;
+		margin-top: 0;
+	}
+  to { 
+		opacity: 0.0;
+		margin-top: -30px;
+	}
+}
+@-moz-keyframes fade-slide-in {
+  from { 
+		opacity: 0.0;
+		margin-top: 0;
+	}
+  to { 
+		opacity: 1.0;
+		margin-top: -30px;
+	}
+}
+@-moz-keyframes fade-slide-out {
+  from { 
+		opacity: 1.0;
+		margin-top: 0;
+	}
+  to { 
+		opacity: 0.0;
+		margin-top: -30px;
+	}
+}
+@keyframes fade-slide-in {
+  from { 
+		opacity: 0.0;
+		margin-top: 0;
+	}
+  to { 
+		opacity: 1.0;
+		margin-top: -30px;
+	}
+}
+@keyframes fade-slide-out {
+  from { 
+		opacity: 1.0;
+		margin-top: 0;
+	}
+  to { 
+		opacity: 0.0;
+		margin-top: -30px;
+	}
+}
+</code>
 	</section>
 </article>
 			

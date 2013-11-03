@@ -55,22 +55,24 @@ section a.read-more:hover{
     color: rgb(0,135,190);
 }
 section label{
-    color: rgb(140,140,140);
-    font-size: 0.9em;
+	color: rgb(140,140,140);
+	font-size: 0.9em;
 	padding: 7px 10px 7px 5px;
-    cursor: pointer;
+	cursor: pointer;
 	float: left;
-    transition: color .4s ease .1s;
-    -webkit-transition: color .4s ease .1s;
+	transition: color .4s ease .1s;
+	-webkit-transition: color .4s ease .1s;
 }
 section label:hover{
-    color: rgb(0,135,190);
+	color: rgb(0,135,190);
 }
-section input{
-    color: rgb(60,60,60);
-    font-size: 1em;
-    border: 0;
-    padding: 7px 5px;
+section input, section .input{
+	position: relative;
+	float: left;
+	color: rgb(60,60,60);
+	font-size: 1em;
+	border: 0;
+	padding: 7px 5px;
 	border-radius: 4px;
 	background: rgb(235,235,235);
 	transition: background .3s ease, box-shadow .3s ease;
@@ -352,13 +354,8 @@ section .checkbox-label{
 }
 
 @-webkit-keyframes rotate {
-  /* rotate on 3d transform for best perf, it ensures GPU accelerated animation */
-  from {
-    -webkit-transform: rotateZ(360deg);
-  }
-  to {
-    -webkit-transform: rotateZ(0deg);
-  }
+  from {-webkit-transform: rotateZ(360deg);}
+  to {-webkit-transform: rotateZ(0deg);}
 }
 @-moz-keyframes rotate {
   from { transform: rotateZ(360deg); }
@@ -411,4 +408,111 @@ section .loading-button .loading-circle{
 	left: 50%;
 	transform: translate3d(-50%,-50%,0);
 	-webkit-transform: translate3d(-50%,-50%,0);
+}
+section .input .added-value{
+	opacity: 0;
+  -webkit-animation: fade-in 3s ease infinite;
+  -moz-animation:    fade-in 2s ease infinite;
+  -o-animation:      fade-in 2s ease infinite;
+  animation:         fade-in 2s ease infinite;
+}
+@-webkit-keyframes fade-in {
+  from { opacity: 0.0;}
+  to { opacity: 1.0;}
+}
+@-moz-keyframes fade-in {
+  from { opacity: 0.0;}
+  to { opacity: 1.0;}
+}
+@-o-keyframes fade-in {
+  from { opacity: 0.0;}
+  to { opacity: 1.0;}
+}
+@keyframes fade-in {
+  from { opacity: 0.0;}
+  to { opacity: 1.0;}
+}
+section .input .old-value{
+	position: absolute;
+	width: 100%;
+	opacity: 1;
+  -webkit-animation: fade-slide-out 2s ease infinite;
+  -moz-animation:    fade-slide-out 2s ease infinite;
+  -o-animation:      fade-slide-out 2s ease infinite;
+  animation:         fade-slide-out 2s ease infinite;
+}
+section .input-change{
+	overflow: hidden;
+	margin-top: 10px;
+	height: 30px;
+}
+section .input .new-value{
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	top: 35px;
+  -webkit-animation: fade-slide-in 2s ease infinite;
+  -moz-animation:    fade-slide-in 2s ease infinite;
+  -o-animation:      fade-slide-in 2s ease infinite;
+  animation:         fade-slide-in 2s ease infinite;
+}
+@-webkit-keyframes fade-slide-in {
+  from { 
+		opacity: 0.0;
+		margin-top: 0;
+	}
+  to { 
+		opacity: 1.0;
+		margin-top: -30px;
+	}
+}
+@-webkit-keyframes fade-slide-out {
+  from { 
+		opacity: 1.0;
+		margin-top: 0;
+	}
+  to { 
+		opacity: 0.0;
+		margin-top: -30px;
+	}
+}
+@-moz-keyframes fade-slide-in {
+  from { 
+		opacity: 0.0;
+		margin-top: 0;
+	}
+  to { 
+		opacity: 1.0;
+		margin-top: -30px;
+	}
+}
+@-moz-keyframes fade-slide-out {
+  from { 
+		opacity: 1.0;
+		margin-top: 0;
+	}
+  to { 
+		opacity: 0.0;
+		margin-top: -30px;
+	}
+}
+@keyframes fade-slide-in {
+  from { 
+		opacity: 0.0;
+		margin-top: 0;
+	}
+  to { 
+		opacity: 1.0;
+		margin-top: -30px;
+	}
+}
+@keyframes fade-slide-out {
+  from { 
+		opacity: 1.0;
+		margin-top: 0;
+	}
+  to { 
+		opacity: 0.0;
+		margin-top: -30px;
+	}
 }
