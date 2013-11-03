@@ -151,31 +151,92 @@ hr{
 <div class="span-6">
 	<p class="styleguide-paragraph">Shadows are standardized and should be used to visually separate elements from the background or suggest that an object is clickable.</p>
 	<p class="styleguide-paragraph">The <strong>strong shadow</strong> is used for elements that have to stand out from a noise background, like the modal window. The <strong>default shadow</strong> is used for a buttons hover, while the <strong>minimal shadow</strong> is a buttons default shadow state. The <strong>light shadow</strong> is for elements like a calendar that are supposed to be separated but are not entirely clickable.</p>
-	<div class='loader'>
-	  <div class='loading-circle'></div>
-		<div class="loading-label">Loading data</div>
-	</div>
+</div>
+<div class='loader span-6'>
+  <div class='loading-circle'></div>
+	<div class="loading-label">Loading data</div>
 </div>
 <code class="span-6 css">
-.shadow.strong{
-    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.25);
+.loader{
+	background: transparent;
+	position:relative;
 }
-.shadow.default{
-    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25);
+.loader .loading-circle{
+	position: absolute;
+	border:3px solid transparent;
+	border-top: 3px solid rgb(40,155,195);
+	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+	left:0px;
+	top:0px;
+	background: transparent;
+	box-shadow: none;
+	/* shared animation */
+	-webkit-animation: rotate 1s linear infinite;
+	-moz-animation:    rotate 1s linear infinite;
+	-o-animation:      rotate 1s linear infinite;
+	animation:         rotate 1s linear infinite;
 }
-.shadow.light{
-    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15);
+.loader .loading-label{
+	margin-left: 50px;
+	padding-top: 5px;
+	font-weight: bold;
+	color: rgb(40,155,195);
 }
-.shadow.minimal{
-    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.05);
+</code>
+<code class="span-6 css">
+/* General animation for rotation */
+@-webkit-keyframes rotate {
+	/* 3d transform for best perf, GPU accelerated */
+	from { -webkit-transform: rotateZ(360deg); }
+	to { -webkit-transform: rotateZ(0deg); }
+}
+@-moz-keyframes rotate {
+	from { transform: rotateZ(360deg); }
+	to { transform: rotateZ(0deg);}
+}
+@-o-keyframes rotate {
+	from { transform: rotateZ(360deg); }
+	to { transform: rotateZ(0deg);}
+}
+@keyframes rotate {
+	from { transform: rotateZ(360deg); }
+	to { transform: rotateZ(0deg);}
 }
 </code>
 
 <h3 class="styleguide-headline">Loading Button</h3>
-<div class="span-6">
+<div class="span-4">
 	<div class="margin-20-0 button span-auto primary loading-button">.button.primary.loading<div class='loading-circle'></div></div>
 </div>
-				</section>
+<code class="span-8 css">
+.loading-button{
+	position: relative;
+	padding-right: 40px;
+}
+.loading-button .loading-circle{
+	position: absolute;
+	display: block;
+	border:3px solid transparent;
+	border-top: 3px solid rgb(250,250,250);
+	border-right: 3px solid rgb(250,250,250);
+	border-radius: 50%;
+	height: 12px;
+	width: 12px;
+	right:7px;
+	top:5px;
+	background: transparent;
+	box-shadow: none;
+	/* shared animation */
+	-webkit-animation: rotate 1s linear infinite;
+	-moz-animation:    rotate 1s linear infinite; 
+	-o-animation:      rotate 1s linear infinite;
+	animation:         rotate 1s linear infinite;
+}
+</code>
+
+	</section>
 </article>
 			
 		</div>
