@@ -131,6 +131,9 @@ section .input-compared .old-value{
 .color.white-gray{ background: rgb(235,235,235); }
 .color.white-gray:before{ content: "White-Gray"; }
 .color.white-gray:after{ content: "RGB 235,235,235"; }
+.color.white-gray-light{ background: rgb(245,245,245); }
+.color.white-gray-light:before{ content: "White-Gray-Light"; }
+.color.white-gray-light:after{ content: "RGB 245,245,245"; }
 .color.white{ background: rgb(250,250,250); }
 .color.white:before{ content: "White"; }
 .color.white:after{ content: "RGB 250,250,250"; }
