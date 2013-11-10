@@ -107,9 +107,9 @@ section .input-compared .old-value{
 .color.brand{ background: rgb(40,155,195); }
 .color.brand:before{ content: "Zupply-blue"; }
 .color.brand:after{ content: "RGB 40,155,195"; }
-.color.brand-dark{ background: rgb(0,135,190); }
+.color.brand-dark{ background: rgb(0,135,175); }
 .color.brand-dark:before{ content: "Zupply-blue-dark"; }
-.color.brand-dark:after{ content: "RGB 0,135,190"; }
+.color.brand-dark:after{ content: "RGB 0,135,175"; }
 .color.blue-dark{ background: rgb(20,95,150); }
 .color.blue-dark:before{ content: "Blue-dark"; }
 .color.blue-dark:after{ content: "RGB 20,95,150"; }
@@ -352,7 +352,6 @@ section .checkbox-label{
 	font-weight: bold;
 	color: rgb(40,155,195);
 }
-
 @-webkit-keyframes rotate {
   from {-webkit-transform: rotateZ(360deg);}
   to {-webkit-transform: rotateZ(0deg);}
