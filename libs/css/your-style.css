@@ -110,9 +110,9 @@ section .input-compared .old-value{
 .color.brand-dark{ background: rgb(0,135,175); }
 .color.brand-dark:before{ content: "Zupply-blue-dark"; }
 .color.brand-dark:after{ content: "RGB 0,135,175"; }
-.color.blue-dark{ background: rgb(20,95,150); }
+.color.blue-dark{ background: rgb(0,75,100); }
 .color.blue-dark:before{ content: "Blue-dark"; }
-.color.blue-dark:after{ content: "RGB 20,95,150"; }
+.color.blue-dark:after{ content: "RGB 0,75,100"; }
 .color.accent{ background: rgb(245,210,45); }
 .color.accent:before{ content: "Zupply-yellow"; }
 .color.accent:after{ content: "RGB 245,210,45"; }
